@@ -69,46 +69,9 @@ public class ManualTestActivity extends Activity {
         pm.clearApplicationUserData("com.cyanogenmod.setupwizard", null);
         ActivityManager am = (ActivityManager) getSystemService(Activity.ACTIVITY_SERVICE);
         am.killBackgroundProcesses("com.cyanogenmod.setupwizard");
-        try {
-            PackageInfo packageInfo = getPackageManager()
-                    .getPackageInfo("com.google.android.setupwizard",
-                            PackageManager.GET_ACTIVITIES |
-                                    PackageManager.GET_RECEIVERS | PackageManager.GET_SERVICES);
-            enableComponentArray(packageInfo.activities);
-            enableComponentArray(packageInfo.services);
-            enableComponentArray(packageInfo.receivers);
-            pm.clearApplicationUserData("com.google.android.setupwizard", null);
-        } catch (Exception e) {
-            Toast.makeText(this, "GMS not installed", Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
-        }
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | intent.getFlags());
         startActivity(intent);
         finish();
-    }
-
-    private void enableGoogleSetup() {
-        try {
-            Settings.Global.putInt(getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 0);
-            Settings.Secure.putInt(getContentResolver(), Settings.Secure.USER_SETUP_COMPLETE, 0);
-            Intent intent = new Intent("android.intent.action.MAIN");
-            intent.addCategory("android.intent.category.HOME");
-            final PackageManager pm = getPackageManager();
-            PackageInfo packageInfo = this.getPackageManager()
-                    .getPackageInfo("com.google.android.setupwizard",
-                            PackageManager.GET_ACTIVITIES |
-                                    PackageManager.GET_RECEIVERS | PackageManager.GET_SERVICES);
-            enableComponentArray(packageInfo.activities);
-            enableComponentArray(packageInfo.services);
-            enableComponentArray(packageInfo.receivers);
-            pm.clearApplicationUserData("com.google.android.setupwizard", null);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | intent.getFlags());
-            startActivity(intent);
-            finish();
-        } catch (Exception e) {
-            Toast.makeText(this, "GMS not installed", Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
-        }
     }
 
     private void setSetupComplete() {
@@ -122,19 +85,6 @@ public class ManualTestActivity extends Activity {
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
         ActivityManager am = (ActivityManager) getSystemService(Activity.ACTIVITY_SERVICE);
         am.killBackgroundProcesses("com.cyanogenmod.setupwizard");
-        try {
-            PackageInfo packageInfo = this.getPackageManager()
-                    .getPackageInfo("com.google.android.setupwizard",
-                            PackageManager.GET_ACTIVITIES |
-                                    PackageManager.GET_RECEIVERS | PackageManager.GET_SERVICES);
-            enableComponentArray(packageInfo.activities);
-            enableComponentArray(packageInfo.services);
-            enableComponentArray(packageInfo.receivers);
-            pm.clearApplicationUserData("com.google.android.setupwizard", null);
-        } catch (Exception e) {
-            Toast.makeText(this, "GMS not installed", Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
-        }
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | intent.getFlags());
         startActivity(intent);
         finish();

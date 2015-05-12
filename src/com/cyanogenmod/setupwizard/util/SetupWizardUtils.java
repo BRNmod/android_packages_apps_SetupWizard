@@ -38,14 +38,9 @@ import android.util.Log;
 import com.android.internal.os.IKillSwitchService;
 import com.cyanogenmod.setupwizard.SetupWizardApp;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-
 public class SetupWizardUtils {
 
     private static final String TAG = SetupWizardUtils.class.getSimpleName();
-
-    private static final String GOOGLE_SETUPWIZARD_PACKAGE = "com.google.android.setupwizard";
 
     private SetupWizardUtils(){}
 
@@ -180,11 +175,6 @@ public class SetupWizardUtils {
         return UserHandle.getCallingUserHandle().isOwner();
     }
 
-    public static boolean hasGMS(Context context) {
-        return GooglePlayServicesUtil.isGooglePlayServicesAvailable(context) !=
-                ConnectionResult.SERVICE_MISSING;
-    }
-
     public static boolean accountExists(Context context, String accountType) {
         return AccountManager.get(context).getAccountsByType(accountType).length > 0;
     }
@@ -192,36 +182,6 @@ public class SetupWizardUtils {
     public static void disableSetupWizard(Context context) {
         disableComponent(context, context.getPackageName(),
                 "com.cyanogenmod.setupwizard.ui.SetupWizardActivity");
-    }
-
-    public static void disableGMSSetupWizard(Context context) {
-        try {
-            PackageInfo packageInfo = context.getPackageManager()
-                    .getPackageInfo(GOOGLE_SETUPWIZARD_PACKAGE,
-                            PackageManager.GET_ACTIVITIES |
-                                    PackageManager.GET_RECEIVERS | PackageManager.GET_SERVICES);
-            disableComponentArray(context, packageInfo.activities);
-            disableComponentArray(context, packageInfo.services);
-            disableComponentArray(context, packageInfo.receivers);
-        } catch (PackageManager.NameNotFoundException e) {
-            Log.e(TAG, "Unable to disable GMS");
-        }
-    }
-
-    public static boolean enableGMSSetupWizard(Context context) {
-        try {
-            PackageInfo packageInfo = context.getPackageManager()
-                    .getPackageInfo(GOOGLE_SETUPWIZARD_PACKAGE,
-                            PackageManager.GET_ACTIVITIES |
-                                    PackageManager.GET_RECEIVERS | PackageManager.GET_SERVICES);
-            enableComponentArray(context, packageInfo.activities);
-            enableComponentArray(context, packageInfo.services);
-            enableComponentArray(context, packageInfo.receivers);
-            return true;
-        } catch (PackageManager.NameNotFoundException e) {
-            Log.e(TAG, "Unable to enable GMS");
-            return false;
-        }
     }
 
     private static void disableComponentArray(Context context, ComponentInfo[] components) {

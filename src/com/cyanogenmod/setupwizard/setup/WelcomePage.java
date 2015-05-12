@@ -36,7 +36,6 @@ import android.widget.NumberPicker;
 
 import com.cyanogenmod.setupwizard.R;
 import com.cyanogenmod.setupwizard.SetupWizardApp;
-import com.cyanogenmod.setupwizard.cmstats.SetupStats;
 import com.cyanogenmod.setupwizard.ui.LocalePicker;
 import com.cyanogenmod.setupwizard.ui.SetupPageFragment;
 import com.cyanogenmod.setupwizard.util.SetupWizardUtils;
@@ -92,10 +91,6 @@ public class WelcomePage extends SetupPage {
                 ActivityOptions.makeCustomAnimation(mContext,
                         android.R.anim.fade_in,
                         android.R.anim.fade_out);
-        SetupStats.addEvent(SetupStats.Categories.BUTTON_CLICK, SetupStats.Label.EMERGENCY_CALL);
-        SetupStats.addEvent(SetupStats.Categories.EXTERNAL_PAGE_LOAD,
-                SetupStats.Action.EXTERNAL_PAGE_LAUNCH,
-                SetupStats.Label.PAGE,  SetupStats.Label.EMERGENCY_CALL);
         mContext.startActivity(intent, options.toBundle());
         return true;
     }
@@ -232,9 +227,6 @@ public class WelcomePage extends SetupPage {
             localResources.updateConfiguration(localConfiguration1, null);
             mHandler.removeCallbacks(mUpdateLocale);
             mCurrentLocale = paramLocale;
-            SetupStats.addEvent(SetupStats.Categories.SETTING_CHANGED,
-                    SetupStats.Action.CHANGE_LOCALE, SetupStats.Label.LOCALE,
-                    mCurrentLocale.getDisplayName());
             mHandler.postDelayed(mUpdateLocale, 1000);
         }
 

@@ -35,10 +35,8 @@ public class SetupWizardApp extends Application {
     public static final String ACTION_FINISHED = "com.cyanogenmod.setupwizard.SETUP_FINISHED";
 
     public static final String ACCOUNT_TYPE_CYANOGEN = "com.cyanogen";
-    public static final String ACCOUNT_TYPE_GMS = "com.google";
 
     public static final String ACTION_SETUP_WIFI = "com.android.net.wifi.SETUP_WIFI_NETWORK";
-    public static final String ACTION_VIEW_LEGAL = "cyanogenmod.intent.action.LEGALESE";
 
     public static final String EXTRA_FIRST_RUN = "firstRun";
     public static final String EXTRA_ALLOW_SKIP = "allowSkip";
@@ -59,9 +57,6 @@ public class SetupWizardApp extends Application {
     };
 
     public static final int REQUEST_CODE_SETUP_WIFI = 0;
-    public static final int REQUEST_CODE_SETUP_GMS= 1;
-    public static final int REQUEST_CODE_RESTORE_GMS= 2;
-    public static final int REQUEST_CODE_SETUP_CYANOGEN= 3;
     public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL= 4;
     public static final int REQUEST_CODE_SETUP_BLUETOOTH= 5;
     public static final int REQUEST_CODE_UNLOCK = 6;
@@ -94,7 +89,6 @@ public class SetupWizardApp extends Application {
             if (!isOwner
                     || Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.USER_SETUP_COMPLETE) == 1) {
-                SetupWizardUtils.disableGMSSetupWizard(this);
                 SetupWizardUtils.disableSetupWizard(this);
                 if (!isOwner) {
                     disableThemeComponentsForSecondaryUser();

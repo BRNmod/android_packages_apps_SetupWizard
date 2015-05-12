@@ -62,13 +62,6 @@ public class CMSetupWizardData extends AbstractSetupData {
             pages.add(new MobileDataPage(mContext, this)
                     .setHidden(!isSimInserted() || mMobileDataEnabled));
         }
-        if (SetupWizardUtils.hasGMS(mContext)) {
-            pages.add(new GmsAccountPage(mContext, this).setHidden(true));
-        }
-        if (!SetupWizardUtils.hasLeanback(mContext)) {
-            pages.add(new CyanogenServicesPage(mContext, this).setHidden(true));
-        }
-        pages.add(new CyanogenSettingsPage(mContext, this));
         pages.add(new OtherSettingsPage(mContext, this));
         pages.add(new DateTimePage(mContext, this));
         pages.add(new FinishPage(mContext, this));
@@ -87,11 +80,9 @@ public class CMSetupWizardData extends AbstractSetupData {
                 intent.getAction()
                         .equals(ConnectivityManager.CONNECTIVITY_ACTION_IMMEDIATE)) {
             showHideMobileDataPage();
-            showHideAccountPages();
         } else  if (intent.getAction()
                 .equals(TelephonyIntents.ACTION_ANY_DATA_CONNECTION_STATE_CHANGED)) {
             showHideMobileDataPage();
-            showHideAccountPages();
         } else if (intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED) ||
                 intent.getAction().equals(TelephonyIntents.ACTION_NETWORK_SET_TIMEZONE)) {
             mTimeZoneSet = true;
@@ -100,20 +91,6 @@ public class CMSetupWizardData extends AbstractSetupData {
                 intent.getAction().equals(TelephonyIntents.ACTION_NETWORK_SET_TIME)) {
             mTimeSet = true;
             showHideDateTimePage();
-        }
-    }
-
-    private void showHideAccountPages() {
-        boolean isConnected = SetupWizardUtils.isNetworkConnected(mContext);
-        GmsAccountPage gmsAccountPage =
-                (GmsAccountPage) getPage(GmsAccountPage.TAG);
-        if (gmsAccountPage != null) {
-            gmsAccountPage.setHidden(!isConnected);
-        }
-        CyanogenServicesPage cyanogenServicesPage =
-                (CyanogenServicesPage) getPage(CyanogenServicesPage.TAG);
-        if (cyanogenServicesPage != null) {
-            cyanogenServicesPage.setHidden(!isConnected);
         }
     }
 

@@ -41,7 +41,6 @@ import android.widget.ProgressBar;
 
 import com.cyanogenmod.setupwizard.R;
 import com.cyanogenmod.setupwizard.SetupWizardApp;
-import com.cyanogenmod.setupwizard.cmstats.SetupStats;
 import com.cyanogenmod.setupwizard.setup.CMSetupWizardData;
 import com.cyanogenmod.setupwizard.setup.Page;
 import com.cyanogenmod.setupwizard.setup.SetupDataCallbacks;
@@ -96,7 +95,6 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
                     }
                 });
         if (sLaunchTime == 0) {
-            SetupStats.addEvent(SetupStats.Categories.APP_LAUNCH, TAG);
             sLaunchTime = System.nanoTime();
         }
         setContentView(R.layout.setup_main);
@@ -333,9 +331,6 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
     @Override
     public void finishSetup() {
         if (!mIsFinishing) {
-            SetupStats.addEvent(SetupStats.Categories.APP_FINISHED, TAG,
-                    SetupStats.Label.TOTAL_TIME, String.valueOf(
-                            System.nanoTime() - sLaunchTime));
             final SetupWizardApp setupWizardApp = (SetupWizardApp)getApplication();
             setupWizardApp.sendStickyBroadcastAsUser(
                     new Intent(SetupWizardApp.ACTION_FINISHED),
@@ -424,8 +419,6 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
                 final ThemeManager tm =
                         (ThemeManager) SetupWizardActivity.this.getSystemService(THEME_SERVICE);
                 tm.removeClient(SetupWizardActivity.this);
-                SetupStats.sendEvents(SetupWizardActivity.this);
-                SetupWizardUtils.disableGMSSetupWizard(SetupWizardActivity.this);
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
                 startActivity(intent);
