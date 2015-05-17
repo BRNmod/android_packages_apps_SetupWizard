@@ -67,6 +67,11 @@ public class FinishPage extends SetupPage {
     public int getNextButtonTitleResId() {
         return R.string.start;
     }
+    
+    @Override
+    public void onFinishSetup() {
+        getCallbacks().finishSetup();
+    }
 
     public static class FinishFragment extends SetupPageFragment {
 

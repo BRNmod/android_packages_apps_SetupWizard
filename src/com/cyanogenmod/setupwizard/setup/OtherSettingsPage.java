@@ -18,7 +18,6 @@ package com.cyanogenmod.setupwizard.setup;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.backup.IBackupManager;
 import android.content.ComponentName;
 import android.content.ContentQueryMap;
 import android.content.ContentResolver;
@@ -82,32 +81,20 @@ public class OtherSettingsPage extends SetupPage {
 
     public static class OtherSettingsFragment extends SetupPageFragment {
 
-        private View mBackupRow;
         private View mLocationRow;
         private View mGpsRow;
         private View mNetworkRow;
-        private CheckBox mBackup;
         private CheckBox mNetwork;
         private CheckBox mGps;
         private CheckBox mLocationAccess;
 
         private ContentResolver mContentResolver;
 
-        private IBackupManager mBackupManager;
-
         // These provide support for receiving notification when Location Manager settings change.
         // This is necessary because the Network Location Provider can change settings
         // if the user does not confirm enabling the provider.
         private ContentQueryMap mContentQueryMap;
         private Observer mSettingsObserver;
-
-
-        private View.OnClickListener mBackupClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onToggleBackup(!mBackup.isChecked());
-            }
-        };
 
         private View.OnClickListener mLocationClickListener = new View.OnClickListener() {
             @Override
@@ -136,13 +123,8 @@ public class OtherSettingsPage extends SetupPage {
         protected void initializePage() {
             final boolean hasTelephony = SetupWizardUtils.hasTelephony(getActivity());
             mContentResolver = getActivity().getContentResolver();
-            mBackupManager = IBackupManager.Stub.asInterface(
-                    ServiceManager.getService(Context.BACKUP_SERVICE));
             TextView summaryView = (TextView) mRootView.findViewById(android.R.id.summary);
             summaryView.setText(R.string.location_services_summary);
-            mBackupRow = mRootView.findViewById(R.id.backup);
-            mBackupRow.setOnClickListener(mBackupClickListener);
-            mBackup = (CheckBox) mRootView.findViewById(R.id.backup_checkbox);
             mLocationRow = mRootView.findViewById(R.id.location);
             mLocationRow.setOnClickListener(mLocationClickListener);
             mLocationAccess = (CheckBox) mRootView.findViewById(R.id.location_checkbox);
@@ -169,12 +151,10 @@ public class OtherSettingsPage extends SetupPage {
         public void onResume() {
             super.onResume();
             updateLocationToggles();
-            updateBackupToggle();
             if (mSettingsObserver == null) {
                 mSettingsObserver = new Observer() {
                     public void update(Observable o, Object arg) {
                         updateLocationToggles();
-                        updateBackupToggle();
                     }
                 };
             }
@@ -202,25 +182,6 @@ public class OtherSettingsPage extends SetupPage {
                 mContentQueryMap.deleteObserver(mSettingsObserver);
             }
             mContentQueryMap.close();
-        }
-
-        private boolean isBackupRestoreEnabled() {
-            try {
-                return mBackupManager.isBackupEnabled();
-            } catch (Exception e) {
-                return false;
-            }
-        }
-
-        private void updateBackupToggle() {
-            mBackup.setChecked(isBackupRestoreEnabled());
-        }
-
-        private void onToggleBackup(boolean checked) {
-            try {
-                mBackupManager.setBackupEnabled(checked);
-            } catch (RemoteException e) {}
-            updateBackupToggle();
         }
 
         private void updateLocationToggles() {
