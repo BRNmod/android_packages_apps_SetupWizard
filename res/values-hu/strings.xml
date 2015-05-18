@@ -38,7 +38,6 @@
   <string name="choose_data_sim_summary" product="tablet">Melyik SIM-kártyát kívánja a mobilinternet eléréshez használni? A kijelölt SIM-kártyára hálózati díjat is felszámolhatnak, mivel ezt fogjuk a készüléke beállítása során használni.</string>
   <string name="choose_data_sim_summary" product="default">Melyik SIM-kártyát kívánja a mobilinternet eléréshez használni? A kijelölt SIM-kártyára hálózati díjat is felszámolhatnak, mivel ezt fogjuk a készüléke beállítása során használni.</string>
   <string name="date_time_summary">Válasszon időzónát és állítsa be az aktuális dátumot és időt, ha szükséges</string>
-  <string name="backup_data_summary"><b>Biztonsági mentés készítése</b> az alkalmazások adatairól, Wi-Fi jelszavakról és egyéb beállításokról a Google szervereire</string>
   <string name="other_services_summary">Ezek a szolgáltatások az Ön szolgálatába állítják a Google-t, amit bármikor ki- vagy bekapcsolhat. Az adatok felhasználása a Google <xliff:g id="name" example="Privacy Policy">%s</xliff:g> alapján történik.</string>
   <string name="location_services_summary">A helymeghatározási szolgáltatások engedélyezni fogják a rendszer és más harmadik féltől származó alkalmazások számára az adatok összegyűjtését és használatát a pozíciója pontosításához. Például egy alkalmazás a becsült helyzetét fogja használni a közeli kávézók meghatározásához.</string>
   <string name="location_access_summary"><b>Lehetővé teszi az alkalmazás számára, amely korábban engedélyt kért,</b> a helymeghatározási információ használatára. Beleértve a jelenlegi és a korábbi helyeket.</string>
@@ -55,7 +54,6 @@
   <string name="yes">Igen</string>
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Segélyhívás</string>
-  <string name="setup_services">Cyanogen funkciók</string>
   <string name="services_explanation" product="tablet">Ezek a szolgáltatások azon dolgoznak, hogy kibővítsék az Ön táblagépe képességeit. Az adatok felhasználása a Cyanogen <xliff:g id="name" example="Privacy Policy">%s</xliff:g> alapján történik.</string>
   <string name="services_explanation" product="default">Ezek a szolgáltatások azon dolgoznak, hogy kibővítsék az Ön telefonja képességeit. Az adatok felhasználása a Cyanogen <xliff:g id="name" example="Privacy Policy">%s</xliff:g> alapján történik.</string>
   <string name="services_privacy_policy">Adatvédelmi nyilatkozat</string>
@@ -69,6 +67,8 @@
   <string name="setup_unlock">Feloldás</string>
   <string name="setup_device_locked">Ezt az eszközt a felhasználó zárolta.</string>
   <string name="setup_require_cyanogen_label"><b>Cyanogen OS fiókjának jelszava szükséges</b> a készülék használatához, még a gyári beállítások visszaállítása után is.</string>
-  <string name="setup_device_locked_instructions"><i>A szolgáltatás ki/be kapcsolásához, kérjük menjen ide: Beállítások &gt; Biztonság</i></string>
+  <string name="setup_device_locked_instructions">
+    <i>A szolgáltatás ki/be kapcsolásához, kérjük menjen ide: Beállítások &gt; Biztonság</i>
+  </string>
   <string name="setup_warning_skip_anyway">Cyanogen OS fiók nélkül nem fog hozzáférni a következőkhöz:\n\nTelefon testreszabása új ikonokkal, háttérképekkel és egyebekkel a Téma kezelő alkalmazáson keresztül\n\nTelefon helyének maghatározása, vagy távolról való törlése, ha elveszett</string>
 </resources>

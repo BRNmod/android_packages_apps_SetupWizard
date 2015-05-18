@@ -38,7 +38,6 @@
   <string name="choose_data_sim_summary" product="tablet">Quelle carte SIM souhaitez-vous utiliser pour les données mobiles ? La carte SIM sélectionnée pourra engendrer des frais, car elle sera utilisée pour configurer votre tablette.</string>
   <string name="choose_data_sim_summary" product="default">Quelle carte SIM souhaitez-vous utiliser pour les données mobiles ? La carte SIM sélectionnée pourra engendrer des frais, car elle sera utilisée pour configurer votre téléphone.</string>
   <string name="date_time_summary">Définir votre fuseau horaire et régler la date et l\'heure si nécessaire</string>
-  <string name="backup_data_summary"><b>Sauvegarder</b> les données des applications, les mots de passe Wi-Fi et d\'autres paramètres sur les serveurs Google</string>
   <string name="other_services_summary">Ces services sont mis à disposition par Google, et vous pouvez les activer ou les désactiver à tout moment. Les données seront utilisées conformément à la <xliff:g id="name" example="Privacy Policy">%s</xliff:g> de Google.</string>
   <string name="location_services_summary">Le service de localisation permet aux applications systèmes et tiers de recueillir et d\'utiliser des données comme votre emplacement approximatif. Par exemple, une application peut utiliser votre emplacement approximatif pour localiser des cafés-restaurants à proximité.</string>
   <string name="location_access_summary"><b>Permettre aux applications ayant obtenu votre autorisation</b> d\'utiliser vos informations de localisation. Cela peut inclure votre position actuelle et les dernières positions.</string>
@@ -46,7 +45,6 @@
   <string name="location_gps" product="default"><b>Améliorer la précision de la localisation</b> en permettant aux applications d\'utiliser le GPS sur votre téléphone.</string>
   <string name="location_network"><b>Utiliser le Wi-Fi</b> pour aider les applications à déterminer votre position.</string>
   <string name="location_network_telephony"><b>Utiliser le Wi-Fi et les réseaux mobiles</b> pour aider les applications à déterminer votre position.</string>
-  <string name="location_network_gms"><b>Utiliser le service de localisation de Google</b> pour aider les applications à déterminer votre position. Cela signifie d\'envoyer anonymement des données de localisation à Google, même lorsque qu\'aucune application est en cours d\'exécution.</string>
   <string name="setup_mobile_data">Activer les données mobiles</string>
   <string name="setup_mobile_data_no_service">Aucun service</string>
   <string name="setup_mobile_data_emergency_only">Appels d\'urgence uniquement</string>
@@ -55,15 +53,4 @@
   <string name="yes">Oui</string>
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Appel d\'urgence</string>
-  <string name="setup_services">Fonctionnalités Cyanogen</string>
-  <string name="services_explanation" product="tablet">Ces services fonctionnent pour étendre les fonctionnalités de votre tablette. Les données seront utilisées conformément à la <xliff:g id="name" example="Politique de confidentialité">%s</xliff:g> de Cyanogen.</string>
-  <string name="services_explanation" product="default">Ces services fonctionnent pour étendre les fonctionnalités de votre téléphone. Les données seront utilisées conformément à la <xliff:g id="name" example="Politique de confidentialité">%s</xliff:g> de Cyanogen.</string>
-  <string name="services_privacy_policy">Politique de confidentialité</string>
-  <string name="services_help_improve_cm">Aider à améliorer <xliff:g id="name" example="CyanogenMod">%s</xliff:g></string>
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve CyanogenMod">%s</xliff:g> en envoyant automatiquement des données de diagnostics et d\'utilisation à Cyanogen. Ces informations ne peuvent pas être utilisées pour vous identifier et elles pourront aider les équipes qui travaillent sur des choses telles que la durée de vie de la batterie, les performances des applications et les nouvelles fonctionnalités <xliff:g id="name" example="CyanogenMod">%s</xliff:g>.</string>
-  <string name="services_apply_theme">Appliquer le thème <xliff:g id="name" example="Material">%s</xliff:g></string>
-  <string name="services_apply_theme_label"><xliff:g id="name" example="Appliquer le thème Material">%s</xliff:g> active les icônes uniques, fonds d\'écran, et polices.</string>
-  <string name="services_os_nav_keys_label"><b>Utilisation des touches de navigation de l\'écran</b> au lieu des touches physiques.</string>
-  <string name="services_use_secure_sms">Utiliser les SMS sécurisés</string>
-  <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%s</xliff:g> pour crypter les conversations SMS avec les autres utilisateurs utilisant les SMS sécurisés sur leurs appareils <xliff:g id="name" example="CyanogenMod">%s</xliff:g>.</string>
 </resources>

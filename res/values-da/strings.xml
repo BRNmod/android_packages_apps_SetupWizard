@@ -38,7 +38,6 @@
   <string name="choose_data_sim_summary" product="tablet">Hvilket SIM-kort vil du bruge til data? Det valgte SIM-kort kan medføre netværksafgifter, da det skal bruges til at konfigurere enheden.</string>
   <string name="choose_data_sim_summary" product="default">Hvilket SIM-kort vil du bruge til data? Det valgte SIM-kort kan medføre netværksafgifter, da det skal bruges til at konfigurere enheden.</string>
   <string name="date_time_summary">Angiv din tidszone og juster aktuelle dato og tid, hvis det er nødvendigt</string>
-  <string name="backup_data_summary"><b>Sikkerhedskopier</b> app-data, WiFi-adgangskoder og andre indstillinger til Googles servere</string>
   <string name="other_services_summary">Disse tjenester får Google til at arbejde for dig, og du kan slå dem til og fra på ethvert tidspunkt. Data vil blive anvendt i overensstemmelse med Googles <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
   <string name="location_services_summary">Placeringstjenester tillader Maps og andre apps at indsamle og bruge data såsom din omtrentlige placering. Maps kan for eksempel bruge din omtrentlige placering for at finde caféer i nærheden.</string>
   <string name="location_access_summary"><b>Tillad apps, der har bedt om din tilladelse</b> til at bruge dine placeringsoplysninger. Dette kan omfatte din aktuelle placering og tidligere placeringer.</string>
@@ -46,7 +45,6 @@
   <string name="location_gps" product="default"><b>Forbedr placeringnøjagtighed</b> ved at tillade apps at bruge GPS på din telefon.</string>
   <string name="location_network"><b>Brug Wi-Fi</b> til at hjælpe apps med at bestemme din placering.</string>
   <string name="location_network_telephony"><b>Brug Wi-Fi og mobile netværk</b> til at hjælpe apps med at bestemme din placering.</string>
-  <string name="location_network_gms"><b>Brug Googles placeringtjeneste</b> til at hjælpe apps med at bestemme din placering. Dermed sendes anonyme placeringsdata til Google, selv når ingen apps kører.</string>
   <string name="setup_mobile_data">Tænd mobildata</string>
   <string name="setup_mobile_data_no_service">Ingen dækning</string>
   <string name="setup_mobile_data_emergency_only">Kun nødopkald</string>
@@ -55,15 +53,4 @@
   <string name="yes">Ja</string>
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Nødopkald</string>
-  <string name="setup_services">Cyanogen-funktioner</string>
-  <string name="services_explanation" product="tablet">Disse tjenester giver dig flere muligheder med din tablet. Data bliver anvendt i overensstemmelse med Cyanogens <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="services_explanation" product="default">Disse tjenester giver dig flere muligheder med din telefon. Data bliver anvendt i overensstemmelse med Cyanogens <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="services_privacy_policy">Privatlivspolitik</string>
-  <string name="services_help_improve_cm">Hjælpe med at forbedre <xliff:g id="name" example="CyanogenMod">%s</xliff:g></string>
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve CyanogenMod">%s</xliff:g> ved automatisk at sende diagnosticerings- og brugsoplysninger til Cyanogen. Denne information kan ikke bruges til at identificere dig, men hjælper udviklerne i arbejdet med eksempelvis batterilevetid, ydeevne og nye <xliff:g id="name" example="CyanogenMod">%s</xliff:g> funktioner.</string>
-  <string name="services_apply_theme">Anvend temaet <xliff:g id="name" example="Material">%s</xliff:g></string>
-  <string name="services_apply_theme_label"><xliff:g id="name" example="Apply the Material theme">%s</xliff:g> giver unikke ikoner, baggrunde og skrifttyper.</string>
-  <string name="services_os_nav_keys_label"><b>Brug navigationstaster på skærmen</b> i stedet for fysiske knapper.</string>
-  <string name="services_use_secure_sms">Brug sikker SMS</string>
-  <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%s</xliff:g> til at kryptere SMS-samtaler med andre brugere ved hjælp af sikker SMS på en <xliff:g id="name" example="CyanogenMod">%s</xliff:g> enhed.</string>
 </resources>

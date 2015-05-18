@@ -38,7 +38,6 @@
   <string name="choose_data_sim_summary" product="tablet">Której karty SIM chcesz użyć do transmisji danych? Wybrana karta SIM może spowodować dodatkowe koszty, ponieważ zostanie ona użyta do skonfigurowania tabletu.</string>
   <string name="choose_data_sim_summary" product="default">Której karty SIM chcesz użyć do transmisji danych? Wybrana karta SIM może spowodować dodatkowe koszty, ponieważ zostanie ona użyta do skonfigurowania telefonu.</string>
   <string name="date_time_summary">Ustaw strefę czasową, bieżącą datę i czas jeśli jest potrzebna</string>
-  <string name="backup_data_summary">Wykonaj <b>kopię zapasową</b> danych aplikacji, haseł WiFi i innych ustawień na serwerach Google</string>
   <string name="other_services_summary">Usługi te umożliwiają działanie aplikacjom Google, możesz jest włączyć lub wyłączyć kiedy chcesz. Dane będą wykorzystywane zgodnie z Google <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
   <string name="location_services_summary">Usługi lokalizacji umożliwiają systemowi i innym aplikacjom na zbieranie danych o użytkowniku w celu szybszego ustalenia przybliżonej lokalizacji. Np. jakaś aplikacja może użyć twojej przybliżonej lokalizacji w celu zlokalizowania kawiarni, które znajdują się w pobliżu.</string>
   <string name="location_access_summary"><b>Zezwalaj aplikacjom, które zapytały cię o zezwolenie</b> do używania informacji o twojej lokalizacji. Może to obejmować twoje poprzednie, ale i bieżącą lokalizację.</string>
@@ -46,7 +45,6 @@
   <string name="location_gps" product="default"><b>Usprawnij dokładność lokalizacji</b> poprzez zezwolenie aplikacjom na używanie GPS twojego telefonu.</string>
   <string name="location_network"><b>Użyj WiFi</b>, aby pomóc aplikacjom w określeniu twojej lokalizacji.</string>
   <string name="location_network_telephony"><b>Użyj WiFi i sieci komórkowych</b>, aby pomóc aplikacjom w określeniu twojej lokalizacji.</string>
-  <string name="location_network_gms"><b>Użyj usług lokalizacji Google</b>, aby pomóc aplikacjom w określeniu twojej lokalizacji. Oznacza to wysyłanie anonimowych danych o twojej lokalizacji do Google, nawet jeśli żadna aplikacja nie jest uruchomiona.</string>
   <string name="setup_mobile_data">Włącz dane mobilne</string>
   <string name="setup_mobile_data_no_service">Brak usługi</string>
   <string name="setup_mobile_data_emergency_only">Tylko połączenia alarmowe</string>
@@ -55,20 +53,9 @@
   <string name="yes">Tak</string>
   <string name="data_sim_name">SIM <xliff:g id="sub">%d</xliff:g> - <xliff:g id="name">%s</xliff:g></string>
   <string name="emergency_call">Połączenie alarmowe</string>
-  <string name="setup_services">Funkcje Cyanogen</string>
-  <string name="services_explanation" product="tablet">Te usługi są uruchomione w celu rozszerzenia możliwości twojego tabletu. Dane będą używane zgodnie z Cyanogen <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="services_explanation" product="default">Te usługi są uruchomione w celu rozszerzenia możliwości twojego telefonu. Dane będą używane zgodnie z Cyanogen <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="services_privacy_policy">Polityka Prywatności</string>
-  <string name="services_help_improve_cm">Pomóż ulepszać <xliff:g id="name" example="CyanogenMod">%s</xliff:g></string>
-  <string name="services_metrics_label"><xliff:g id="name" example="Help improve CyanogenMod">%s</xliff:g> automatycznie wysyłając dane diagnostyczne do Cyanogen. Te informacje nie będą mogły zostać użyte do identyfikacji i stanowią pomoc dla zespołów pracujących nad, między innymi, czasem pracy na baterii, wydajnością aplikacji oraz nowymi funkcjami <xliff:g id="name" example="CyanogenMod">%s</xliff:g>.</string>
-  <string name="services_apply_theme">Zastosuj motyw <xliff:g id="name" example="Material">%s</xliff:g></string>
-  <string name="services_apply_theme_label"><xliff:g id="name" example="Apply the Material theme">%s</xliff:g> zawiera unikalne ikony, tapety oraz czcionki.</string>
-  <string name="services_os_nav_keys_label"><b>Użyj ekranowych przycisków nawigacyjnych</b> zamiast klawiszy sprzętowych.</string>
-  <string name="services_use_secure_sms">Używaj bezpiecznych wiadomości SMS</string>
-  <string name="services_secure_sms_label"><xliff:g id="name" example="Use secure SMS">%s</xliff:g>, aby prowadzić szyfrowane konwersacje z innymi użytkownikami używając bezpiecznych SMS na urządzeniach z <xliff:g id="name" example="CyanogenMod">%s</xliff:g>.</string>
   <string name="setup_unlock">Odblokuj</string>
   <string name="setup_device_locked">To urządzenie zostało zablokowane przez użytkownika.</string>
-  <string name="setup_require_cyanogen_label"><b>Wymaga hasła twojego konta Cyanogen OS</b>, aby korzystać z urządzenia, nawet po przywróceniu ustawień fabrycznych.</string>
-  <string name="setup_device_locked_instructions"><i>Aby włączyć/wyłączyć tę funkcję, przejdź do Ustawienia &gt; Zabezpieczenia</i></string>
-  <string name="setup_warning_skip_anyway">Bez Konta Cyanogen OS nie będziesz w stanie:\n\nDostosować swojego telefonu wybierając nowe ikony, tapety oraz więcej innych opcji w aplikacji Motywy\n\nZlokalizować lub zdalnie wymazać pamięć telefonu w przypadku zgubienia</string>
+  <string name="setup_device_locked_instructions">
+    <i>Aby włączyć/wyłączyć tę funkcję, przejdź do Ustawienia &gt; Zabezpieczenia</i>
+  </string>
 </resources>
