@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.cyanogenmod.setupwizard"
+          package="rocks.brnmod.setupwizard"
           android:versionCode="3"
           android:sharedUserId="android.uid.system">
 
@@ -61,7 +61,7 @@
     <permission android:name="org.whispersystems.whisperpush.permissions.REGISTER"
                 android:protectionLevel="signature" />
 
-    <protected-broadcast android:name="com.cyanogenmod.setupwizard.SETUP_FINISHED"
+    <protected-broadcast android:name="rocks.brnmod.setupwizard.SETUP_FINISHED"
                          android:permission="cyanogenmod.permission.FINISH_SETUP"/>
 
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />

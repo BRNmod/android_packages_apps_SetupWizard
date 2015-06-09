@@ -23,7 +23,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.ui.SetupPageFragment;
 import rocks.brnmod.setupwizard.ui.SetupWizardActivity;

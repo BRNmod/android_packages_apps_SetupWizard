@@ -22,7 +22,7 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.ui.SetupPageFragment;
 

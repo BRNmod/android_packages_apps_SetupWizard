@@ -40,7 +40,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.SetupWizardApp;
 import rocks.brnmod.setupwizard.ui.SetupPageFragment;

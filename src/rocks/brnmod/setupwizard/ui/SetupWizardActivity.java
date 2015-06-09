@@ -40,7 +40,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.SetupWizardApp;
 import rocks.brnmod.setupwizard.setup.CMSetupWizardData;

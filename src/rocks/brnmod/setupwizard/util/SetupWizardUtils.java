@@ -183,7 +183,7 @@ public class SetupWizardUtils {
 
     public static void disableSetupWizard(Context context) {
         disableComponent(context, context.getPackageName(),
-                "com.cyanogenmod.setupwizard.ui.SetupWizardActivity");
+                "rocks.brnmod.setupwizard.ui.SetupWizardActivity");
     }
 
     private static void disableComponentArray(Context context, ComponentInfo[] components) {

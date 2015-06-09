@@ -35,7 +35,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.NumberPicker;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.SetupWizardApp;
 import rocks.brnmod.setupwizard.ui.LocalePicker;

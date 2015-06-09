@@ -26,7 +26,7 @@ import android.transition.Slide;
 import android.transition.Transition;
 import android.view.Gravity;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 
 public abstract class SetupPage implements Page {

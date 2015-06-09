@@ -27,7 +27,7 @@ import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.SetupWizardApp;
 import rocks.brnmod.setupwizard.ui.LoadingFragment;

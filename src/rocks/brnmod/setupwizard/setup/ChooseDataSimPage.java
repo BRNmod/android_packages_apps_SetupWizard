@@ -39,7 +39,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.SetupWizardApp;
 import rocks.brnmod.setupwizard.ui.SetupPageFragment;

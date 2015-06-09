@@ -20,7 +20,7 @@ package rocks.brnmod.setupwizard.ui;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.cyanogenmod.setupwizard.R;
+import rocks.brnmod.setupwizard.R;
 
 public class LoadingFragment extends SetupPageFragment {
 
