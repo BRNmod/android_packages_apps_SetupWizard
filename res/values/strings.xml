@@ -31,6 +31,7 @@
   <string name="setup_sim_missing">SIM card missing</string>
   <string name="setup_choose_data_sim">Choose a SIM for data</string>
   <string name="setup_location">Location services</string>
+  <string name="setup_common">Common settings</string>
   <string name="setup_other">Other services</string>
   <string name="setup_datetime">Date &amp; time</string>
   <string name="setup_current_date">Current date</string>
@@ -60,4 +61,8 @@
   <string name="setup_device_locked_instructions">
     <i>To turn this feature off/on, please go to Settings &gt; Security</i>
   </string>
+    <string name="common_settings_summary">Here are some common settings, feel free to change them.</string>
+    <string name="privacy_guard_default_summary">Enable Privacy Guard by default for newly-installed apps</string>
+    <string name="advanced_reboot_summary" >Advanced reboot: Include recovery, bootloader and soft reboot options in the power menu when unlocked</string>
+  <string name="development_settings_summary">Show developer options in settings</string>
 </resources>

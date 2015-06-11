@@ -50,11 +50,11 @@ import rocks.brnmod.setupwizard.util.SetupWizardUtils;
 import java.util.Observable;
 import java.util.Observer;
 
-public class OtherSettingsPage extends SetupPage {
+public class LocationSettingsPage extends SetupPage {
 
-    private static final String TAG = "OtherSettingsPage";
+    private static final String TAG = "LocationSettingsPage";
 
-    public OtherSettingsPage(Context context, SetupDataCallbacks callbacks) {
+    public LocationSettingsPage(Context context, SetupDataCallbacks callbacks) {
         super(context, callbacks);
     }
 
@@ -65,7 +65,7 @@ public class OtherSettingsPage extends SetupPage {
             Bundle args = new Bundle();
             args.putString(Page.KEY_PAGE_ARGUMENT, getKey());
             args.putInt(Page.KEY_PAGE_ACTION, action);
-            fragment = new OtherSettingsFragment();
+            fragment = new LocationSettingsFragment();
             fragment.setArguments(args);
         }
         return fragment;
@@ -81,7 +81,7 @@ public class OtherSettingsPage extends SetupPage {
         return R.string.setup_location;
     }
 
-    public static class OtherSettingsFragment extends SetupPageFragment {
+    public static class LocationSettingsFragment extends SetupPageFragment {
 
         private View mLocationRow;
         private View mGpsRow;

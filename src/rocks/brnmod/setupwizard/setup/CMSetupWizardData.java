@@ -64,7 +64,8 @@ public class CMSetupWizardData extends AbstractSetupData {
             pages.add(new MobileDataPage(mContext, this)
                     .setHidden(!isSimInserted() || mMobileDataEnabled));
         }
-        pages.add(new OtherSettingsPage(mContext, this));
+        pages.add(new LocationSettingsPage(mContext, this));
+        pages.add(new CommonSettingsPage(mContext, this));
         pages.add(new DateTimePage(mContext, this));
         pages.add(new FinishPage(mContext, this));
         return new PageList(pages.toArray(new SetupPage[pages.size()]));
