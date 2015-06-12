@@ -64,5 +64,5 @@
     <string name="common_settings_summary">Here are some common settings, feel free to change them.</string>
     <string name="privacy_guard_default_summary">Enable Privacy Guard by default for newly-installed apps</string>
     <string name="advanced_reboot_summary" >Advanced reboot: Include recovery, bootloader and soft reboot options in the power menu when unlocked</string>
-  <string name="development_settings_summary">Show developer options in settings</string>
+  <string name="development_settings_summary">Enable developer options and show them in settings</string>
 </resources>
