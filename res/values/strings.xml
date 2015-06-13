@@ -32,6 +32,7 @@
   <string name="setup_choose_data_sim">Choose a SIM for data</string>
   <string name="setup_location">Location services</string>
   <string name="setup_common">Common settings</string>
+  <string name="setup_sound">Sound settings</string>
   <string name="setup_other">Other services</string>
   <string name="setup_datetime">Date &amp; time</string>
   <string name="setup_current_date">Current date</string>
@@ -65,4 +66,9 @@
     <string name="privacy_guard_default_summary">Enable Privacy Guard by default for newly-installed apps</string>
     <string name="advanced_reboot_summary" >Advanced reboot: Include recovery, bootloader and soft reboot options in the power menu when unlocked</string>
   <string name="development_settings_summary">Enable developer options and show them in settings</string>
+  <string name="sound_settings_summary">Here are some common sound and vibration settings, feel free to change them.</string>
+  <string name="sound_effects_enabled_summary">Touch sounds</string>
+  <string name="lockscreen_sounds_enabled_summary">Screen locking sounds</string>
+  <string name="dtmf_tone_when_dialing">Dial pad tones</string>
+  <string name="vibrate_input_devices_summary">Vibrate on touch</string>
 </resources>

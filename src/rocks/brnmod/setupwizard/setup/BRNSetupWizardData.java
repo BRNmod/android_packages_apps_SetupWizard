@@ -31,16 +31,16 @@ import rocks.brnmod.setupwizard.util.SetupWizardUtils;
 
 import java.util.ArrayList;
 
-public class CMSetupWizardData extends AbstractSetupData {
+public class BRNSetupWizardData extends AbstractSetupData {
 
-    private static final String TAG = CMSetupWizardData.class.getSimpleName();
+    private static final String TAG = BRNSetupWizardData.class.getSimpleName();
 
     private boolean mTimeSet = false;
     private boolean mTimeZoneSet = false;
     private boolean mMobileDataEnabled = SystemProperties
             .getBoolean("ro.com.android.mobiledata", true);
 
-    public CMSetupWizardData(Context context) {
+    public BRNSetupWizardData(Context context) {
         super(context);
     }
 
@@ -66,6 +66,7 @@ public class CMSetupWizardData extends AbstractSetupData {
         }
         pages.add(new LocationSettingsPage(mContext, this));
         pages.add(new CommonSettingsPage(mContext, this));
+        pages.add(new SoundSettingsPage(mContext, this));
         pages.add(new DateTimePage(mContext, this));
         pages.add(new FinishPage(mContext, this));
         return new PageList(pages.toArray(new SetupPage[pages.size()]));

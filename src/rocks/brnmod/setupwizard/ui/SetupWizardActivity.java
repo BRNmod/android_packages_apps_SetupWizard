@@ -43,7 +43,7 @@ import android.widget.ProgressBar;
 import rocks.brnmod.setupwizard.R;
 
 import rocks.brnmod.setupwizard.SetupWizardApp;
-import rocks.brnmod.setupwizard.setup.CMSetupWizardData;
+import rocks.brnmod.setupwizard.setup.BRNSetupWizardData;
 import rocks.brnmod.setupwizard.setup.Page;
 import rocks.brnmod.setupwizard.setup.SetupDataCallbacks;
 import rocks.brnmod.setupwizard.util.EnableAccessibilityController;
@@ -72,7 +72,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
 
     private EnableAccessibilityController mEnableAccessibilityController;
 
-    private CMSetupWizardData mSetupData;
+    private BRNSetupWizardData mSetupData;
 
     private final Handler mHandler = new Handler();
 
@@ -106,9 +106,9 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
         mButtonBar = findViewById(R.id.button_bar);
         mFinishingProgressBar = (ProgressBar)findViewById(R.id.finishing_bar);
         ((SetupWizardApp)getApplicationContext()).disableStatusBar();
-        mSetupData = (CMSetupWizardData)getLastNonConfigurationInstance();
+        mSetupData = (BRNSetupWizardData)getLastNonConfigurationInstance();
         if (mSetupData == null) {
-            mSetupData = new CMSetupWizardData(getApplicationContext());
+            mSetupData = new BRNSetupWizardData(getApplicationContext());
         }
         mNextButton = (Button) findViewById(R.id.next_button);
         mPrevButton = (Button) findViewById(R.id.prev_button);

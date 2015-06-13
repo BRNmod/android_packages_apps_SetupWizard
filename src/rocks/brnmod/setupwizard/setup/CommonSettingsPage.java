@@ -130,7 +130,7 @@ public class CommonSettingsPage extends SetupPage {
 
         @Override
         protected int getLayoutResource() {
-            return R.layout.common_settings;
+            return R.layout.common_settings_page;
         }
 
         @Override
