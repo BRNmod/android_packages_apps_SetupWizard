@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">กรุณาเลือกซิมการ์ดที่คุณต้องการใช้ข้อมูล การกระทำนี้อาจมีค่าบริการ เพื่อใช้เครือข่ายค่าในการตั้งค่าโทรศัพท์ของคุณ</string>
   <string name="date_time_summary">ตั้งค่าเขตเวลาและวันที่ของคุณหากคุณต้องการ</string>
   <string name="other_services_summary">บริการเหล่านี้ Google จะเป็นผู้ให้บริการของคุณ คุณสามารถเปิดหรือปิดมันได้เสมอเมื่อคุณต้องการ โดยข้อมูลจะถูกใช้ตาม <xliff:g id="name" example="Privacy Policy">%s</xliff:g> ของ Google</string>
-  <string name="location_services_summary">บริการตำแหน่งจะอนุญาตให้ระบบและแอปอื่นๆสามารถเก็บข้อมูลที่อยู่ของคุณได้ เช่นแอปอาจจะใช้ข้อมูลที่อยู่ของคุณเพื่อหาร้านกาแฟที่อยู่ใกล้คุณมากที่สุด</string>
-  <string name="location_access_summary"><b>อนุญาตให้แอปขอสิทธิ์</b> การใช้ข้อมูลตำแหน่งของคุณ ซึ่งอาจรวมถึงสถานปัจจุบันและสถานที่ผ่านมา</string>
+    <string name="location_access_summary"><b>อนุญาตให้แอปขอสิทธิ์</b> การใช้ข้อมูลตำแหน่งของคุณ ซึ่งอาจรวมถึงสถานปัจจุบันและสถานที่ผ่านมา</string>
   <string name="location_gps" product="tablet"><b>เพิ่มความแม่นยำ</b> ของที่ตั้งโดยการอนุญาตให้แอปใช้ GPS บนแท็บเล็ตของคุณ</string>
   <string name="location_gps" product="default"><b>เพิ่มความแม่นยำ</b> ของที่ตั้งโดยการอนุญาตให้แอปใช้ GPS บนโทรศัพท์ของคุณ</string>
   <string name="location_network"><b>ใช้ Wi-Fi</b> เพื่อช่วยแอปหาตำแหน่งของคุณได้ง่ายขึ้น</string>

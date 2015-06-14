@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">Quina SIM vols utilitzar per a les dades? La SIM seleccionada pot provocar càrrecs per part de l\'operador ja que servirà per configurar el teu telèfon.</string>
   <string name="date_time_summary">Estableix el teu fus horari i ajusta la data i hora actual si és necessari</string>
   <string name="other_services_summary">Aquests serveis posen a Google a treballar per a tu, i pots activar-los o desactivar-los en qualsevol moment. Les dades s\'utilitzaran d\'acord amb la <xliff:g id="name" example="Privacy Policy">%s</xliff:g> de Google.</string>
-  <string name="location_services_summary">Els serveis d\'ubicació permeten al sistema i a apps de tercers recopilar i utilitzar dades com la teva ubicació aproximada. Per exemple, una app pot utilitzar la teva ubicació aproximada per localitzar cafeteries als voltants.</string>
-  <string name="location_access_summary"><b>Permet a les apps que han demanat el teu permís</b> utilitzar la teva informació d\'ubicació. Això pot incloure la teva ubicació i ubicacions anteriors.</string>
+    <string name="location_access_summary"><b>Permet a les apps que han demanat el teu permís</b> utilitzar la teva informació d\'ubicació. Això pot incloure la teva ubicació i ubicacions anteriors.</string>
   <string name="location_gps" product="tablet"><b>Millora la precisió de la ubicació</b> permetent a les apps utilitzar el GPS de la teva tauleta.</string>
   <string name="location_gps" product="default"><b>Millora la precisió de la ubicació</b> permetent a les apps utilitzar el GPS del teu telèfon.</string>
   <string name="location_network"><b>Utilitza Wi-Fi</b> per ajudar a les apps a determinar la teva ubicació.</string>

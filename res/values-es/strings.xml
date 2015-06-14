@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">¿Qué tarjeta SIM quieres utilizar para los datos? La tarjeta SIM seleccionada puede incurrir en cargos de red ya que se utilizará para configurar el teléfono.</string>
   <string name="date_time_summary">Configura la zona horaria y ajusta la fecha y hora actuales si es necesario</string>
   <string name="other_services_summary">Estos servicios hacen a Google trabajar para ti, y puedes activarlos o desactivarlos en cualquier momento. Los datos se utilizarán según la <xliff:g id="name" example="Privacy Policy">%s</xliff:g> de Google.</string>
-  <string name="location_services_summary">Los servicios de localización permiten al sistema y a otras aplicaciones recopilar y utilizar datos tales como tu ubicación aproximada. Por ejemplo, una aplicación puede utilizar tu ubicación aproximada para localizar cafeterías cercanas.</string>
-  <string name="location_access_summary"><b>Permitir aplicaciones que han solicitado tu permiso</b> para usar tu información de ubicación. Esto puede incluir tu localización actual y ubicaciones recientes.</string>
+    <string name="location_access_summary"><b>Permitir aplicaciones que han solicitado tu permiso</b> para usar tu información de ubicación. Esto puede incluir tu localización actual y ubicaciones recientes.</string>
   <string name="location_gps" product="tablet"><b>Mejorar la precisión de localización</b> al permitir que las aplicaciones usen el GPS del tablet.</string>
   <string name="location_gps" product="default"><b>Mejorar la precisión de localización</b> al permitir que las aplicaciones usen el GPS del teléfono.</string>
   <string name="location_network"><b>Uso de Wi-Fi</b> para ayudar a las aplicaciones a determinar tu ubicación.</string>

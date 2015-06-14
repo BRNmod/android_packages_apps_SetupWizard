@@ -38,8 +38,7 @@
   <string name="choose_data_sim_summary" product="tablet">Wéi eng SIM soll fir d\'Date benotzt ginn? Déi ausgewiele SIM kéint Netzwierkkäschte verursaachen, well se fir d\'Installatioun vum Tablet benotzt gëtt.</string>
   <string name="choose_data_sim_summary" product="default">Wéi eng SIM soll fir d\'Date benotzt ginn? Déi ausgewiele SIM kéint Netzwierkkäschte verursaachen, well se fir d\'Installatioun vum Telefon benotzt gëtt.</string>
   <string name="date_time_summary">Definéier deng Zäitzon an ajustéier falls néideg den aktuellen Datum an déi aktuell Zäit</string>
-  <string name="location_services_summary">Standuertservicer erlabe System-Appen an aneren Appen, Informatiounen zum Standuert ze sammelen an ze benotzen. Eng App ka beispillsweis däin ongeféiere Standuert benotzen, fir Caféen an der Géigend ze lokaliséieren.</string>
-  <string name="location_access_summary"><b>Appen déi deng Berechtegung gefrot hunn</b> den Zougrëff op d\'Standuertinformatiounen erlaben. Dat ka fir den aktuelle Standuert an och fir fréier Standuerter gëllen.</string>
+    <string name="location_access_summary"><b>Appen déi deng Berechtegung gefrot hunn</b> den Zougrëff op d\'Standuertinformatiounen erlaben. Dat ka fir den aktuelle Standuert an och fir fréier Standuerter gëllen.</string>
   <string name="location_gps" product="tablet"><b>Standuertgenauegkeet verbesseren</b> andeem Appen op de GPS vum Tablet däerfen zougräifen.</string>
   <string name="location_gps" product="default"><b>Standuertgenauegkeet verbesseren</b> andeem Appen op de GPS vum Telefon däerfen zougräifen.</string>
   <string name="location_network"><b>WLAN benotzen</b>, fir Appen ze hëllefen, de Standuert erauszefannen.</string>

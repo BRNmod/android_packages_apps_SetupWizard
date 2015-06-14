@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">Manakah SIM yang ingin Anda gunakan untuk data? SIM yang dipilih dapat dikenakan biaya jaringan karena akan digunakan untuk menyiapkan perangkat Anda.</string>
   <string name="date_time_summary">Atur zona waktu dan sesuaikan tanggal dan waktu jika diperlukan</string>
   <string name="other_services_summary">Layanan ini menempatkan Google bekerja untuk Anda, dan Anda dapat mengubah mereka atau menonaktifkan setiap saat. Data akan digunakan sesuai dengan Google <xliff:g id="name" example="Privacy Policy">%s </xliff:g>.</string>
-  <string name="location_services_summary">Layanan lokasi mengizinkan Maps dan aplikasi lain untuk mengumpulkan dan menggunakan data seperti perkiraan lokasi Anda. Misalnya, Maps dapat menggunakan perkiraan lokasi Anda untuk menemukan toko-toko kopi terdekat.</string>
-  <string name="location_access_summary"><b>Izinkan aplikasi yang telah meminta izin Anda</b> menggunakan informasi lokasi Anda. Ini mungkin termasuk lokasi Anda saat ini dan lokasi terakhir.</string>
+    <string name="location_access_summary"><b>Izinkan aplikasi yang telah meminta izin Anda</b> menggunakan informasi lokasi Anda. Ini mungkin termasuk lokasi Anda saat ini dan lokasi terakhir.</string>
   <string name="location_gps" product="tablet"><b>Meningkatkan akurasi lokasi</b> dengan mengizinkan aplikasi untuk menggunakan GPS pada ponsel Anda.</string>
   <string name="location_gps" product="default"><b>Meningkatkan akurasi lokasi</b> dengan mengizinkan aplikasi untuk menggunakan GPS pada ponsel Anda.</string>
   <string name="location_network"><b>Penggunaan Wi-Fi</b> untuk membantu aplikasi menentukan lokasi Anda.</string>

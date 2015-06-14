@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">您想要使用哪一張 SIM 卡作為行動數據? 所選擇的 SIM 卡可能產生費用，因為它將用於設定您的手機。</string>
   <string name="date_time_summary">如果需要的話，請調整您的時區及日期與時間</string>
   <string name="other_services_summary">啟用這些服務讓 Google 來為您工作，您可以在任何時候開啟或關閉。您的資料將依照 Google 的 <xliff:g id="name" example="Privacy Policy">%s</xliff:g> 來使用。</string>
-  <string name="location_services_summary">位置服務允許系統和其他應用程式取得及使用您最近的位置。例如，應用程式可能是用您的位置來尋找附近的咖啡店。</string>
-  <string name="location_access_summary"><b>允許您許可的應用程式</b>使用您的定位資訊。可能包括您目前和過去的位置。</string>
+    <string name="location_access_summary"><b>允許您許可的應用程式</b>使用您的定位資訊。可能包括您目前和過去的位置。</string>
   <string name="location_gps" product="tablet">允許應用程式在您的平板電腦上使用 GPS 以<b>改善定位精準度</b></string>
   <string name="location_gps" product="default">允許應用程式在您的手機上使用 GPS 以<b>改善定位精準度</b></string>
   <string name="location_network"><b>使用 Wi-Fi</b> 來幫助應用程式確定您所在的位置。</string>

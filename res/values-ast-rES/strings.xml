@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">¿Qué SIM quies usar pa los datos? La tarxeta SIM esbillada pue llevar cargos de rede yá que s\'usará pa configurar el to móvil.</string>
   <string name="date_time_summary">Afita\'l to fusu horariu y axusta la data y hora actuales si ye necesario</string>
   <string name="other_services_summary">Estos servicios ponen a Google a trabayar pot ti, y pues activalos o desactivalos en cualesquier momentu. Los datos usaránse acordies cola <xliff:g id="name" example="Política de privacidá">%s</xliff:g> de Google.</string>
-  <string name="location_services_summary">Los servicios de llocalización permiten al sistema y les aplicaciones de terceres partes a recoyer y usar datos como\'l to allugamientu aproximáu. Por exemplu, una aplicación podría usar l\'allugamientu aproximáu p\'asitiate cerca d\'una cafetería.</string>
-  <string name="location_access_summary"><b>Permitir a les tos aplicaciones entrugar pol to permisu</b> pa usar la to información d\'allugamientu. Esto podría incluyir los tos allugamientos recientes y pasaos.</string>
+    <string name="location_access_summary"><b>Permitir a les tos aplicaciones entrugar pol to permisu</b> pa usar la to información d\'allugamientu. Esto podría incluyir los tos allugamientos recientes y pasaos.</string>
   <string name="location_gps" product="tablet"><b>Ameyorar la precisión del allugamientu</b> permitiendo a les aplicaciones usar el GPS na to tableta.</string>
   <string name="location_gps" product="default"><b>Ameyorar la precisión del allugamientu</b> permitiendo a les aplicaciones usar el GPS nel to móvil.</string>
   <string name="location_network"><b>Usar Wi-Fi</b> p\'ayudar a les aplicaciones a determinar el to allugamientu.</string>

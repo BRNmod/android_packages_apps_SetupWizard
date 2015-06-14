@@ -37,6 +37,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -89,8 +90,12 @@ public class LocationSettingsPage extends SetupPage {
         private CheckBox mNetwork;
         private CheckBox mGps;
         private CheckBox mLocationAccess;
+        private Button mMicrogNlpSettings;
 
         private ContentResolver mContentResolver;
+
+        private static final String MICROG_GMS_CORE = "com.google.android.gms";
+        private static final String MICROG_NLP_SETTINGS = "org.microg.nlp.ui.SettingsActivity";
 
         // These provide support for receiving notification when Location Manager settings change.
         // This is necessary because the Network Location Provider can change settings
@@ -121,21 +126,37 @@ public class LocationSettingsPage extends SetupPage {
             }
         };
 
+        private View.OnClickListener mMicrogNlpSettingsListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName(MICROG_GMS_CORE, MICROG_NLP_SETTINGS));
+                startActivity(intent);
+            }
+        };
+
         @Override
         protected void initializePage() {
             final boolean hasTelephony = SetupWizardUtils.hasTelephony(getActivity());
             mContentResolver = getActivity().getContentResolver();
             TextView summaryView = (TextView) mRootView.findViewById(android.R.id.summary);
             summaryView.setText(R.string.location_services_summary);
+
             mLocationRow = mRootView.findViewById(R.id.location);
             mLocationRow.setOnClickListener(mLocationClickListener);
             mLocationAccess = (CheckBox) mRootView.findViewById(R.id.location_checkbox);
+
             mGpsRow = mRootView.findViewById(R.id.gps);
             mGpsRow.setOnClickListener(mGpsClickListener);
             mGps = (CheckBox) mRootView.findViewById(R.id.gps_checkbox);
+
             mNetworkRow = mRootView.findViewById(R.id.network);
             mNetworkRow.setOnClickListener(mNetworkClickListener);
             mNetwork = (CheckBox) mRootView.findViewById(R.id.network_checkbox);
+
+            mMicrogNlpSettings = (Button) mRootView.findViewById(R.id.microg_nlp_button);
+            mMicrogNlpSettings.setOnClickListener(mMicrogNlpSettingsListener);
+
             TextView networkSummary = (TextView) mRootView.findViewById(R.id.network_summary);
             if (hasTelephony) {
                 networkSummary.setText(R.string.location_network_telephony);

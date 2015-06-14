@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">Hvilket SIM-kort vil du bruge til data? Det valgte SIM-kort kan medføre netværksafgifter, da det skal bruges til at konfigurere enheden.</string>
   <string name="date_time_summary">Angiv din tidszone og juster aktuelle dato og tid, hvis det er nødvendigt</string>
   <string name="other_services_summary">Disse tjenester får Google til at arbejde for dig, og du kan slå dem til og fra på ethvert tidspunkt. Data vil blive anvendt i overensstemmelse med Googles <xliff:g id="name" example="Privacy Policy">%s</xliff:g>.</string>
-  <string name="location_services_summary">Placeringstjenester tillader Maps og andre apps at indsamle og bruge data såsom din omtrentlige placering. Maps kan for eksempel bruge din omtrentlige placering for at finde caféer i nærheden.</string>
-  <string name="location_access_summary"><b>Tillad apps, der har bedt om din tilladelse</b> til at bruge dine placeringsoplysninger. Dette kan omfatte din aktuelle placering og tidligere placeringer.</string>
+    <string name="location_access_summary"><b>Tillad apps, der har bedt om din tilladelse</b> til at bruge dine placeringsoplysninger. Dette kan omfatte din aktuelle placering og tidligere placeringer.</string>
   <string name="location_gps" product="tablet"><b>Forbedr placeringnøjagtighed</b> ved at tillade apps at bruge GPS på din tablet.</string>
   <string name="location_gps" product="default"><b>Forbedr placeringnøjagtighed</b> ved at tillade apps at bruge GPS på din telefon.</string>
   <string name="location_network"><b>Brug Wi-Fi</b> til at hjælpe apps med at bestemme din placering.</string>

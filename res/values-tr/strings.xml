@@ -39,8 +39,7 @@
   <string name="choose_data_sim_summary" product="default">Hangi SIM\'i veri için kullanmak istiyorsunuz? Telefonunuzun kurulumu için kullanılacağı için seçili SIM şebeke ücretlerine tabi olabilir.</string>
   <string name="date_time_summary">Zaman diliminizi seçin ve gerekirse geçerli tarih ve saati ayarlayın</string>
   <string name="other_services_summary">Bu hizmetler ile Google sizin için çalışmaya başlar ve istediğiniz zaman açıp kapatabilirsiniz. Veriler Google\'ın <xliff:g id="name" example="Privacy Policy">%s</xliff:g>\'na uygun olarak kullanılacaktır.</string>
-  <string name="location_services_summary">Konum servisleri sistem ve üçüncü taraf uygulamalara yaklaşık konumunuz gibi bilgileri toplama ve kullanma izni verir. Örneğin, bir uygulama yakındaki eğlence merkezlerini belirlemek için yaklaşık konumunuzu kullanabilir.</string>
-  <string name="location_access_summary"><b>Konum bilginizi isteyen uygulamalara izin ver.</b> Bu geçerli konumunuzu ve geçmiş konumlarınızı içerebilir.</string>
+    <string name="location_access_summary"><b>Konum bilginizi isteyen uygulamalara izin ver.</b> Bu geçerli konumunuzu ve geçmiş konumlarınızı içerebilir.</string>
   <string name="location_gps" product="tablet"><b>Konum doğruluğunu geliştirin</b> uygulamalara tabletinizdeki GPS\'i kullanma izni verin.</string>
   <string name="location_gps" product="default"><b>Konum doğruluğunu geliştirin</b> uygulamalara telefonunuzdaki GPS\'i kullanma izni verin.</string>
   <string name="location_network">
