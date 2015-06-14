@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2015 BRNmod Team
      Copyright (C) 2013 The CyanogenMod Project
 
@@ -22,12 +21,14 @@
 
     <include layout="@layout/header_condensed" />
 
-    <FrameLayout android:id="@+id/page"
+    <FrameLayout
+        android:id="@+id/page"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <ScrollView android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
 
@@ -161,7 +162,7 @@
                     android:paddingLeft="@dimen/location_margin_left"
                     android:paddingRight="@dimen/content_margin_right"
                     android:background="?android:attr/selectableItemBackground"
-                    android:clickable="true" >
+                    android:clickable="true">
 
                     <CheckBox
                         android:id="@+id/vibrate_input_devices_checkbox"

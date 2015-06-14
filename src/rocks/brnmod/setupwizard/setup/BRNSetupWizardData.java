@@ -84,7 +84,7 @@ public class BRNSetupWizardData extends AbstractSetupData {
                 intent.getAction()
                         .equals(ConnectivityManager.CONNECTIVITY_ACTION_IMMEDIATE)) {
             showHideMobileDataPage();
-        } else  if (intent.getAction()
+        } else if (intent.getAction()
                 .equals(TelephonyIntents.ACTION_ANY_DATA_CONNECTION_STATE_CHANGED)) {
             showHideMobileDataPage();
         } else if (intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED) ||
@@ -155,7 +155,7 @@ public class BRNSetupWizardData extends AbstractSetupData {
             int state = tm.getSimState(i);
             if (state != TelephonyManager.SIM_STATE_ABSENT
                     && state != TelephonyManager.SIM_STATE_UNKNOWN) {
-                 return true;
+                return true;
             }
         }
         return false;

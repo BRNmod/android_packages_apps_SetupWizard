@@ -44,10 +44,11 @@ public class SetupWizardUtils {
 
     private static final String TAG = SetupWizardUtils.class.getSimpleName();
 
-    private SetupWizardUtils(){}
+    private SetupWizardUtils() {
+    }
 
     public static void tryEnablingWifi(Context context) {
-        WifiManager wifiManager = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         if (!wifiManager.isWifiEnabled()) {
             wifiManager.setWifiEnabled(true);
         }
@@ -156,7 +157,7 @@ public class SetupWizardUtils {
     }
 
     public static boolean isRadioReady(Context context, ServiceState state) {
-        final SetupWizardApp setupWizardApp = (SetupWizardApp)context.getApplicationContext();
+        final SetupWizardApp setupWizardApp = (SetupWizardApp) context.getApplicationContext();
         if (setupWizardApp.isRadioReady()) {
             return true;
         } else {
@@ -187,9 +188,9 @@ public class SetupWizardUtils {
     }
 
     private static void disableComponentArray(Context context, ComponentInfo[] components) {
-        if(components != null) {
+        if (components != null) {
             ComponentInfo[] componentInfos = components;
-            for(int i = 0; i < componentInfos.length; i++) {
+            for (int i = 0; i < componentInfos.length; i++) {
                 disableComponent(context, componentInfos[i].packageName, componentInfos[i].name);
             }
         }
@@ -205,9 +206,9 @@ public class SetupWizardUtils {
     }
 
     private static void enableComponentArray(Context context, ComponentInfo[] components) {
-        if(components != null) {
+        if (components != null) {
             ComponentInfo[] componentInfos = components;
-            for(int i = 0; i < componentInfos.length; i++) {
+            for (int i = 0; i < componentInfos.length; i++) {
                 enableComponent(context, componentInfos[i].packageName, componentInfos[i].name);
             }
         }

@@ -25,26 +25,42 @@ import android.os.Bundle;
 public interface Page {
 
     public static final String KEY_PAGE_ARGUMENT = "key_arg";
-    public static final String KEY_PAGE_ACTION= "action";
+    public static final String KEY_PAGE_ACTION = "action";
 
     public static final int ACTION_NEXT = 1;
     public static final int ACTION_PREVIOUS = 2;
 
     public String getKey();
+
     public int getTitleResId();
+
     public int getPrevButtonTitleResId();
+
     public int getNextButtonTitleResId();
+
     public Fragment getFragment(FragmentManager fragmentManager, int action);
+
     public Bundle getData();
+
     public void resetData(Bundle data);
+
     public boolean isRequired();
+
     public Page setRequired(boolean required);
+
     public boolean isHidden();
+
     public Page setHidden(boolean hidden);
+
     public boolean doPreviousAction();
+
     public boolean doNextAction();
+
     public void doLoadAction(FragmentManager fragmentManager, int action);
+
     public void onFinishSetup();
+
     public boolean onActivityResult(int requestCode, int resultCode, Intent data);
+
     public SetupDataCallbacks getCallbacks();
 }

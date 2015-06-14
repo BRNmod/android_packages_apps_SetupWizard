@@ -19,13 +19,22 @@ package rocks.brnmod.setupwizard.setup;
 
 public interface SetupDataCallbacks {
     void onNextPage();
+
     void onPreviousPage();
+
     void onPageLoaded(Page page);
+
     void onPageTreeChanged();
+
     void onFinish();
+
     void finishSetup();
+
     boolean isCurrentPage(Page page);
+
     Page getPage(String key);
+
     Page getPage(int key);
+
     void addFinishRunnable(Runnable runnable);
 }

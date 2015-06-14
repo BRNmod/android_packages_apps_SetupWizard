@@ -75,7 +75,7 @@ public class SimCardMissingPage extends SetupPage {
         protected void initializePage() {
             final int simLocation = getResources().getInteger(
                     R.integer.sim_image_type);
-            ImageView simLogo = ((ImageView)mRootView.findViewById(R.id.sim_slot_image));
+            ImageView simLogo = ((ImageView) mRootView.findViewById(R.id.sim_slot_image));
             switch (simLocation) {
                 case SIM_SIDE:
                     simLogo.setImageResource(R.drawable.sim_side);

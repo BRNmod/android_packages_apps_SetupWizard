@@ -60,17 +60,20 @@ public class EnableAccessibilityController {
                 case MESSAGE_SPEAK_WARNING: {
                     String text = mContext.getString(R.string.continue_to_enable_accessibility);
                     mTts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-                } break;
+                }
+                break;
                 case MESSAGE_SPEAK_ENABLE_CANCELED: {
                     String text = mContext.getString(R.string.enable_accessibility_canceled);
                     mTts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-                } break;
+                }
+                break;
                 case MESSAGE_ENABLE_ACCESSIBILITY: {
                     enableAccessibility();
                     mTone.play();
                     mTts.speak(mContext.getString(R.string.accessibility_enabled),
                             TextToSpeech.QUEUE_FLUSH, null);
-                } break;
+                }
+                break;
             }
         }
     };

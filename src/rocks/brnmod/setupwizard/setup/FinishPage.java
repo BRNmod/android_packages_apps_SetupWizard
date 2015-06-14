@@ -38,7 +38,7 @@ public class FinishPage extends SetupPage {
 
     @Override
     public Fragment getFragment(FragmentManager fragmentManager, int action) {
-        mFinishFragment = (FinishFragment)fragmentManager.findFragmentByTag(getKey());
+        mFinishFragment = (FinishFragment) fragmentManager.findFragmentByTag(getKey());
         if (mFinishFragment == null) {
             Bundle args = new Bundle();
             args.putString(Page.KEY_PAGE_ARGUMENT, getKey());
@@ -69,7 +69,7 @@ public class FinishPage extends SetupPage {
     public int getNextButtonTitleResId() {
         return R.string.start;
     }
-    
+
     @Override
     public void onFinishSetup() {
         getCallbacks().finishSetup();
@@ -78,7 +78,8 @@ public class FinishPage extends SetupPage {
     public static class FinishFragment extends SetupPageFragment {
 
         @Override
-        protected void initializePage() {}
+        protected void initializePage() {
+        }
 
         @Override
         protected int getLayoutResource() {

@@ -51,7 +51,8 @@ public class LoadingFragment extends SetupPageFragment {
     }
 
     @Override
-    protected void initializePage() {}
+    protected void initializePage() {
+    }
 
     @Override
     protected int getLayoutResource() {
@@ -66,7 +67,7 @@ public class LoadingFragment extends SetupPageFragment {
         private final Bundle mOptions;
 
         private StartActivityForResultRunnable(LoadingFragment loadingFragment,
-                Intent intent, int requestCode, Bundle options) {
+                                               Intent intent, int requestCode, Bundle options) {
             mLoadingFragment = loadingFragment;
             mIntent = intent;
             mRequestCode = requestCode;

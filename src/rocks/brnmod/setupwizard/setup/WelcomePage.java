@@ -58,7 +58,7 @@ public class WelcomePage extends SetupPage {
 
     @Override
     public Fragment getFragment(FragmentManager fragmentManager, int action) {
-        mWelcomeFragment = (WelcomeFragment)fragmentManager.findFragmentByTag(getKey());
+        mWelcomeFragment = (WelcomeFragment) fragmentManager.findFragmentByTag(getKey());
         if (mWelcomeFragment == null) {
             Bundle args = new Bundle();
             args.putString(Page.KEY_PAGE_ARGUMENT, getKey());
@@ -193,8 +193,8 @@ public class WelcomePage extends SetupPage {
             mCurrentLocale = mInitialLocale;
             mAdapterIndices = new int[mLocaleAdapter.getCount()];
             int currentLocaleIndex = 0;
-            String [] labels = new String[mLocaleAdapter.getCount()];
-            for (int i=0; i<mAdapterIndices.length; i++) {
+            String[] labels = new String[mLocaleAdapter.getCount()];
+            for (int i = 0; i < mAdapterIndices.length; i++) {
                 com.android.internal.app.LocalePicker.LocaleInfo localLocaleInfo = mLocaleAdapter.getItem(i);
                 Locale localLocale = localLocaleInfo.getLocale();
                 if (localLocale.equals(mCurrentLocale)) {

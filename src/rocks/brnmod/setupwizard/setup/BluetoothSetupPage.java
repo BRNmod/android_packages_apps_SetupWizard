@@ -56,7 +56,7 @@ public class BluetoothSetupPage extends SetupPage {
 
     @Override
     public SetupPageFragment getFragment(FragmentManager fragmentManager, int action) {
-        mLoadingFragment = (LoadingFragment)fragmentManager.findFragmentByTag(getKey());
+        mLoadingFragment = (LoadingFragment) fragmentManager.findFragmentByTag(getKey());
         if (mLoadingFragment == null) {
             Bundle args = new Bundle();
             args.putString(Page.KEY_PAGE_ARGUMENT, getKey());
@@ -93,7 +93,7 @@ public class BluetoothSetupPage extends SetupPage {
     public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SetupWizardApp.REQUEST_CODE_SETUP_BLUETOOTH) {
             getCallbacks().onNextPage();
-        }  else {
+        } else {
             return false;
         }
         return true;

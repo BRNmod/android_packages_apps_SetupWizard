@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2015 BRNmod Team
      Copyright (C) 2013 The CyanogenMod Project
 
@@ -16,9 +15,9 @@
      limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <include layout="@layout/header" />
 
@@ -29,14 +28,16 @@
         android:layout_width="match_parent"
         android:layout_height="8dp" />
 
-    <FrameLayout android:id="@+id/page"
-                 android:layout_width="match_parent"
-                 android:layout_height="0dp"
-                 android:layout_weight="1">
+    <FrameLayout
+        android:id="@+id/page"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <ScrollView android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fillViewport="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:id="@+id/page_view"
@@ -94,7 +95,7 @@
                         android:duplicateParentState="true"
                         android:clickable="false"
                         android:textOff="@string/no"
-                        android:textOn="@string/yes"/>
+                        android:textOn="@string/yes" />
                 </LinearLayout>
 
                 <include layout="@layout/divider" />

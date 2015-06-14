@@ -58,8 +58,8 @@ public class SetupWizardApp extends Application {
     };
 
     public static final int REQUEST_CODE_SETUP_WIFI = 0;
-    public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL= 4;
-    public static final int REQUEST_CODE_SETUP_BLUETOOTH= 5;
+    public static final int REQUEST_CODE_SETUP_CAPTIVE_PORTAL = 4;
+    public static final int REQUEST_CODE_SETUP_BLUETOOTH = 5;
     public static final int REQUEST_CODE_UNLOCK = 6;
 
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
@@ -82,7 +82,7 @@ public class SetupWizardApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        mStatusBarManager = (StatusBarManager)getSystemService(Context.STATUS_BAR_SERVICE);
+        mStatusBarManager = (StatusBarManager) getSystemService(Context.STATUS_BAR_SERVICE);
         try {
             // Since this is a new component, we need to disable here if the user
             // has already been through setup on a previous version.
@@ -94,7 +94,7 @@ public class SetupWizardApp extends Application {
                 if (!isOwner) {
                     disableThemeComponentsForSecondaryUser();
                 }
-            }  else {
+            } else {
                 disableCaptivePortalDetection();
             }
         } catch (Settings.SettingNotFoundException e) {
@@ -143,7 +143,7 @@ public class SetupWizardApp extends Application {
 
     private void disableThemeComponentsForSecondaryUser() {
         PackageManager pm = getPackageManager();
-        for(String pkgName : THEME_PACKAGES) {
+        for (String pkgName : THEME_PACKAGES) {
             try {
                 pm.getApplicationInfo(pkgName, 0);
                 pm.setApplicationEnabledSetting(pkgName,

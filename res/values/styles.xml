@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2015 BRNmod Team
      Copyright (C) 2013 The CyanogenMod Project
 
@@ -16,6 +15,7 @@
      limitations under the License.
 -->
 <resources>
+
     <style name="Theme.Setup" parent="@android:style/Theme.Material.Light">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>

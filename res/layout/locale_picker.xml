@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 **
 ** Copyright 2008, The Android Open Source Project
 **
@@ -19,11 +18,12 @@
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageButton android:id="@+id/increment"
+    <ImageButton
+        android:id="@+id/increment"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="22dip"
-        android:paddingBottom="22dip"/>
+        android:paddingBottom="22dip" />
 
     <EditText
         android:id="@+id/numberpicker_input"
@@ -33,10 +33,11 @@
         android:gravity="center"
         android:singleLine="true" />
 
-    <ImageButton android:id="@+id/decrement"
+    <ImageButton
+        android:id="@+id/decrement"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="22dip"
-        android:paddingBottom="22dip"/>
+        android:paddingBottom="22dip" />
 
 </merge>

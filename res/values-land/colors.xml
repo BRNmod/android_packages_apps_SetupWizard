@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2015 BRNmod Team
      Copyright (C) 2013 The CyanogenMod Project
 
@@ -16,5 +15,5 @@
      limitations under the License.
 -->
 <resources>
-     <color name="header_bg">@color/header_condensed_bg</color>
+    <color name="header_bg">@color/header_condensed_bg</color>
 </resources>

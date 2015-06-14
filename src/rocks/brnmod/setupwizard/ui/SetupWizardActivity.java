@@ -102,11 +102,11 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
         setContentView(R.layout.setup_main);
         mRootView = findViewById(R.id.root);
         mRootView.setSystemUiVisibility(UI_FLAGS);
-        mReveal = (ImageView)mRootView.findViewById(R.id.reveal);
+        mReveal = (ImageView) mRootView.findViewById(R.id.reveal);
         mButtonBar = findViewById(R.id.button_bar);
-        mFinishingProgressBar = (ProgressBar)findViewById(R.id.finishing_bar);
-        ((SetupWizardApp)getApplicationContext()).disableStatusBar();
-        mSetupData = (BRNSetupWizardData)getLastNonConfigurationInstance();
+        mFinishingProgressBar = (ProgressBar) findViewById(R.id.finishing_bar);
+        ((SetupWizardApp) getApplicationContext()).disableStatusBar();
+        mSetupData = (BRNSetupWizardData) getLastNonConfigurationInstance();
         if (mSetupData == null) {
             mSetupData = new BRNSetupWizardData(getApplicationContext());
         }
@@ -144,8 +144,8 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 return
-                    mEnableAccessibilityController.onInterceptTouchEvent(event) &
-                    mEnableAccessibilityController.onTouchEvent(event);
+                        mEnableAccessibilityController.onInterceptTouchEvent(event) &
+                                mEnableAccessibilityController.onTouchEvent(event);
             }
         });
         registerReceiver(mSetupData, mSetupData.getIntentFilter());
@@ -163,7 +163,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
                     finishSetup();
                 }
             }, 500);
-        }  else {
+        } else {
             mSetupData.onResume();
             onPageTreeChanged();
             enableButtonBar(true);
@@ -298,7 +298,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
         mNextButton.setVisibility(View.INVISIBLE);
         mPrevButton.startAnimation(fadeOut);
         mPrevButton.setVisibility(View.INVISIBLE);
-        final SetupWizardApp setupWizardApp = (SetupWizardApp)getApplication();
+        final SetupWizardApp setupWizardApp = (SetupWizardApp) getApplication();
         setupWizardApp.enableStatusBar();
         setupWizardApp.enableCaptivePortalDetection();
         Animation fadeIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
@@ -333,7 +333,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
     @Override
     public void finishSetup() {
         if (!mIsFinishing) {
-            final SetupWizardApp setupWizardApp = (SetupWizardApp)getApplication();
+            final SetupWizardApp setupWizardApp = (SetupWizardApp) getApplication();
             setupWizardApp.sendStickyBroadcastAsUser(
                     new Intent(SetupWizardApp.ACTION_FINISHED),
                     UserHandle.getCallingUserHandle());
@@ -400,10 +400,12 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks,
             }
 
             @Override
-            public void onAnimationCancel(Animator animation) {}
+            public void onAnimationCancel(Animator animation) {
+            }
 
             @Override
-            public void onAnimationRepeat(Animator animation) {}
+            public void onAnimationRepeat(Animator animation) {
+            }
         });
         anim.start();
     }

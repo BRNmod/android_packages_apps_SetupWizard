@@ -191,9 +191,9 @@ public class LocationSettingsPage extends SetupPage {
             // listen for Location Manager settings changes
             Cursor settingsCursor = getActivity().getContentResolver()
                     .query(Settings.Secure.CONTENT_URI, null,
-                    "(" + Settings.System.NAME + "=?)",
-                    new String[]{Settings.Secure.LOCATION_PROVIDERS_ALLOWED},
-                    null);
+                            "(" + Settings.System.NAME + "=?)",
+                            new String[]{Settings.Secure.LOCATION_PROVIDERS_ALLOWED},
+                            null);
             mContentQueryMap =
                     new ContentQueryMap(settingsCursor, Settings.System.NAME, true, null);
         }

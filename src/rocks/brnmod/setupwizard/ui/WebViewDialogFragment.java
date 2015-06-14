@@ -55,7 +55,7 @@ public class WebViewDialogFragment extends DialogFragment {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
         mRootView = getActivity().getLayoutInflater().inflate(R.layout.terms_webview, null, false);
-        mWebView = (WebView)mRootView.findViewById(R.id.webview);
+        mWebView = (WebView) mRootView.findViewById(R.id.webview);
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -70,7 +70,7 @@ public class WebViewDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         if (mDialog == null) {
-            mDialog =new AlertDialog.Builder(getActivity())
+            mDialog = new AlertDialog.Builder(getActivity())
                     .setView(mRootView)
                     .setCancelable(false)
                     .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {

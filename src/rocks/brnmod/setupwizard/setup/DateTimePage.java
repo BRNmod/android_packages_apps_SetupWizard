@@ -141,14 +141,14 @@ public class DateTimePage extends SetupPage {
                 }
             });
             mTimeView = mRootView.findViewById(R.id.time_item);
-            mDateTextView = (TextView)mRootView.findViewById(R.id.date_text);
+            mDateTextView = (TextView) mRootView.findViewById(R.id.date_text);
             mTimeView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     showTimePicker();
                 }
             });
-            mTimeTextView = (TextView)mRootView.findViewById(R.id.time_text);
+            mTimeTextView = (TextView) mRootView.findViewById(R.id.time_text);
             // Pre-select current/default timezone
             mHandler.post(new Runnable() {
                 @Override
@@ -236,9 +236,9 @@ public class DateTimePage extends SetupPage {
     }
 
     private static SimpleAdapter constructTimezoneAdapter(Context context,
-            boolean sortedByName) {
-        final String[] from = new String[] {KEY_DISPLAYNAME, KEY_GMT};
-        final int[] to = new int[] {android.R.id.text1, android.R.id.text2};
+                                                          boolean sortedByName) {
+        final String[] from = new String[]{KEY_DISPLAYNAME, KEY_GMT};
+        final int[] to = new int[]{android.R.id.text1, android.R.id.text2};
 
         final String sortKey = (sortedByName ? KEY_DISPLAYNAME : KEY_OFFSET);
         final TimeZoneComparator comparator = new TimeZoneComparator(sortKey);
@@ -327,8 +327,8 @@ public class DateTimePage extends SetupPage {
         final int listSize = adapter.getCount();
         for (int i = 0; i < listSize; i++) {
             // Using HashMap<String, Object> induces unnecessary warning.
-            final HashMap<?,?> map = (HashMap<?,?>)adapter.getItem(i);
-            final String id = (String)map.get(KEY_ID);
+            final HashMap<?, ?> map = (HashMap<?, ?>) adapter.getItem(i);
+            final String id = (String) map.get(KEY_ID);
             if (defaultId.equals(id)) {
                 // If current timezone is in this list, move focus to it
                 return i;

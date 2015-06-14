@@ -109,7 +109,7 @@ public class WifiSetupPage extends SetupPage {
 
     @Override
     public SetupPageFragment getFragment(FragmentManager fragmentManager, int action) {
-        mLoadingFragment = (LoadingFragment)fragmentManager.findFragmentByTag(getKey());
+        mLoadingFragment = (LoadingFragment) fragmentManager.findFragmentByTag(getKey());
         if (mLoadingFragment == null) {
             Bundle args = new Bundle();
             args.putString(Page.KEY_PAGE_ARGUMENT, getKey());
@@ -156,7 +156,7 @@ public class WifiSetupPage extends SetupPage {
             } else {
                 getCallbacks().onNextPage();
             }
-        }  else {
+        } else {
             return false;
         }
         return true;

@@ -130,13 +130,13 @@ public class MobileDataPage extends SetupPage {
 
         @Override
         protected void initializePage() {
-            mPageView = (ViewGroup)mRootView.findViewById(R.id.page_view);
+            mPageView = (ViewGroup) mRootView.findViewById(R.id.page_view);
             mProgressBar = (ProgressBar) mRootView.findViewById(R.id.progress);
             mEnableDataRow = mRootView.findViewById(R.id.data);
             mEnableDataRow.setOnClickListener(mEnableDataClickListener);
             mEnableMobileData = (Switch) mRootView.findViewById(R.id.data_switch);
-            mSignalView =  (ImageView) mRootView.findViewById(R.id.signal);
-            mNameView =  (TextView) mRootView.findViewById(R.id.enable_data_title);
+            mSignalView = (ImageView) mRootView.findViewById(R.id.signal);
+            mNameView = (TextView) mRootView.findViewById(R.id.enable_data_title);
             updateDataConnectionStatus();
             updateSignalStrength();
         }
@@ -151,7 +151,7 @@ public class MobileDataPage extends SetupPage {
             super.onResume();
             mIsAttached = true;
             mContext = getActivity().getApplicationContext();
-            mPhone = (TelephonyManager)getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+            mPhone = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
             mPhone.listen(mPhoneStateListener,
                     PhoneStateListener.LISTEN_SERVICE_STATE
                             | PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
@@ -242,7 +242,7 @@ public class MobileDataPage extends SetupPage {
                 // Some SIM cards are marketed as data-only and do not support voice service, and on
                 // these SIM cards, we want to show signal bars for data service as well as the "no
                 // service" or "emergency calls only" text that indicates that voice is not available.
-                switch(mServiceState.getVoiceRegState()) {
+                switch (mServiceState.getVoiceRegState()) {
                     case ServiceState.STATE_POWER_OFF:
                         retVal = false;
                         break;

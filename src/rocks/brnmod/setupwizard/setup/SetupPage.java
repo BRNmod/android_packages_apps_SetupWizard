@@ -70,7 +70,8 @@ public abstract class SetupPage implements Page {
     }
 
     @Override
-    public void onFinishSetup() {}
+    public void onFinishSetup() {
+    }
 
     @Override
     public void doLoadAction(FragmentManager fragmentManager, int action) {
@@ -79,7 +80,7 @@ public abstract class SetupPage implements Page {
             Transition t = new Slide(Gravity.RIGHT);
             fragment.setEnterTransition(t);
             fragmentManager.beginTransaction()
-                    .replace(R.id.content,fragment, getKey())
+                    .replace(R.id.content, fragment, getKey())
                     .commit();
         } else {
             Transition t = new Slide(Gravity.LEFT);

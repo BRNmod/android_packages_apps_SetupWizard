@@ -110,7 +110,7 @@ public class ChooseDataSimPage extends SetupPage {
         private View.OnClickListener mSetDataSimClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SubscriptionInfo subInfoRecord = (SubscriptionInfo)view.getTag();
+                SubscriptionInfo subInfoRecord = (SubscriptionInfo) view.getTag();
                 if (subInfoRecord != null) {
                     mSubscriptionManager.setDefaultDataSubId(subInfoRecord.getSubscriptionId());
                     setDataSubChecked(subInfoRecord);
@@ -120,7 +120,7 @@ public class ChooseDataSimPage extends SetupPage {
 
         @Override
         protected void initializePage() {
-            mPageView = (ViewGroup)mRootView.findViewById(R.id.page_view);
+            mPageView = (ViewGroup) mRootView.findViewById(R.id.page_view);
             mProgressBar = (ProgressBar) mRootView.findViewById(R.id.progress);
             List<SubscriptionInfo> subInfoRecords = mSubscriptionManager.getActiveSubscriptionInfoList();
             int simCount = subInfoRecords.size();
@@ -168,7 +168,7 @@ public class ChooseDataSimPage extends SetupPage {
         public void onResume() {
             super.onResume();
             mIsAttached = true;
-            mPhone = (TelephonyManager)getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+            mPhone = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
             for (int i = 0; i < mPhoneStateListeners.size(); i++) {
                 mPhone.listen(mPhoneStateListeners.valueAt(i),
                         PhoneStateListener.LISTEN_SERVICE_STATE
@@ -270,7 +270,7 @@ public class ChooseDataSimPage extends SetupPage {
                 }
                 String formattedName =
                         getString(R.string.data_sim_name,
-                                  subInfoRecord.getSimSlotIndex() + 1, name);
+                                subInfoRecord.getSimSlotIndex() + 1, name);
                 mNameViews.get(subInfoRecord.getSimSlotIndex()).setText(formattedName);
             }
         }
@@ -316,7 +316,7 @@ public class ChooseDataSimPage extends SetupPage {
                 // Some SIM cards are marketed as data-only and do not support voice service, and on
                 // these SIM cards, we want to show signal bars for data service as well as the "no
                 // service" or "emergency calls only" text that indicates that voice is not available.
-                switch(serviceState.getVoiceRegState()) {
+                switch (serviceState.getVoiceRegState()) {
                     case ServiceState.STATE_POWER_OFF:
                         retVal = false;
                         break;

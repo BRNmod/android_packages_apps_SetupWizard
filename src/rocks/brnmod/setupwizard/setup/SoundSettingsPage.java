@@ -170,7 +170,7 @@ public class SoundSettingsPage extends SetupPage {
 
             mSoundEffects.setChecked(touchSoundsEnabled);
             mLockscreenSounds.setChecked(lockscreenSoundsEnabled);
-            mDtmfTone.setChecked(DtmfToneEnabled );
+            mDtmfTone.setChecked(DtmfToneEnabled);
             mVibrateInputDevices.setChecked(vibrateInputDevicesEnabled);
         }
 

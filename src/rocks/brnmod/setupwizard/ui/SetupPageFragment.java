@@ -48,10 +48,10 @@ public abstract class SetupPageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         mRootView = inflater.inflate(getLayoutResource(), container, false);
         mTitleView = (TextView) mRootView.findViewById(android.R.id.title);
-        mHeaderView = (ViewGroup )  mRootView.findViewById(R.id.header);
+        mHeaderView = (ViewGroup) mRootView.findViewById(R.id.header);
         initializePage();
         return mRootView;
     }
@@ -98,6 +98,7 @@ public abstract class SetupPageFragment extends Fragment {
     }
 
     protected abstract void initializePage();
+
     protected abstract int getLayoutResource();
 
 }

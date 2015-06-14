@@ -32,7 +32,7 @@ public class PageList extends LinkedHashMap<String, Page> {
     }
 
     public Page getPage(int index) {
-        int i=0;
+        int i = 0;
         for (Page page : values()) {
             if (i == index) {
                 return page;
