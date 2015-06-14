@@ -98,7 +98,7 @@ public class WifiSetupPage extends SetupPage {
 
     public WifiSetupPage(Context context, SetupDataCallbacks callbacks) {
         super(context, callbacks);
-        String server = Settings.Global.getString(context.getContentResolver(), "captive_portal_server");
+        String server = Settings.Global.getString(context.getContentResolver(), Settings.Global.CAPTIVE_PORTAL_SERVER);
         if (server == null) server = DEFAULT_SERVER;
         try {
             mCaptivePortalUrl = new URL("http://" + server + "/generate_204");

@@ -70,4 +70,5 @@
     <string name="dtmf_tone_when_dialing">Dial pad tones</string>
     <string name="vibrate_input_devices_summary">Vibrate on touch</string>
     <string name="open_microg_nlp_settings">Open <b>µg UnifiedNlp</b> Settings</string>
+    <string name="captive_portal_detection_summary">If a <b>captive portal</b> is detected show exclamation mark in status bar and switch to other data connection</string>
 </resources>

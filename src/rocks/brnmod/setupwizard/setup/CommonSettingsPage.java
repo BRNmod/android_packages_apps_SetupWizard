@@ -73,9 +73,11 @@ public class CommonSettingsPage extends SetupPage {
         private View mPrivacyGuardRow;
         private View mAdvancedRebootRow;
         private View mDevelopmentSettingsRow;
+        private View mCaptivePortalRow;
         private CheckBox mPrivacyGuard;
         private CheckBox mAdvancedReboot;
         private CheckBox mDevelopmentSettings;
+        private CheckBox mCaptivePortal;
 
         private ContentResolver mContentResolver;
 
@@ -109,6 +111,16 @@ public class CommonSettingsPage extends SetupPage {
             }
         };
 
+        private View.OnClickListener mCaptivePortalClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Settings.Global.putInt(mContentResolver,
+                        Settings.Global.CAPTIVE_PORTAL_DETECTION_ENABLED, !mCaptivePortal.isChecked() ? 1 : 0);
+
+                updateSettingsToggles();
+            }
+        };
+
         @Override
         protected void initializePage() {
             mContentResolver = getActivity().getContentResolver();
@@ -126,6 +138,10 @@ public class CommonSettingsPage extends SetupPage {
             mDevelopmentSettingsRow = mRootView.findViewById(R.id.development_settings);
             mDevelopmentSettingsRow.setOnClickListener(mDevelopmentSettingsClickListener);
             mDevelopmentSettings = (CheckBox) mRootView.findViewById(R.id.development_settings_checkbox);
+
+            mCaptivePortalRow = mRootView.findViewById(R.id.captive_portal);
+            mCaptivePortalRow.setOnClickListener(mCaptivePortalClickListener);
+            mCaptivePortal = (CheckBox) mRootView.findViewById(R.id.captive_portal_checkbox);
         }
 
         @Override
@@ -156,10 +172,13 @@ public class CommonSettingsPage extends SetupPage {
                     Settings.Secure.ADVANCED_REBOOT, 0) == 1;
             boolean developmentSettingsEnabled = Settings.Global.getInt(mContentResolver,
                     Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) == 1;
+            boolean captivePortalDetectionEnabled = Settings.Global.getInt(mContentResolver,
+                    Settings.Global.CAPTIVE_PORTAL_DETECTION_ENABLED, 1) == 1;
 
             mPrivacyGuard.setChecked(privacyGuardEnabled);
             mAdvancedReboot.setChecked(advancedRebootEnabled);
             mDevelopmentSettings.setChecked(developmentSettingsEnabled);
+            mCaptivePortal.setChecked(captivePortalDetectionEnabled);
         }
 
     }
