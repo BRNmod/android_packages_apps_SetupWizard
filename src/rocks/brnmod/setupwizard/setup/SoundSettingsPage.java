@@ -66,11 +66,11 @@ public class SoundSettingsPage extends SetupPage {
         private View mSoundEffectsRow;
         private View mLockscreenSoundsRow;
         private View mDtmfToneRow;
-        private View mVibrateInputDevicesRow;
+        private View mHapticFeedbackRow;
         private CheckBox mSoundEffects;
         private CheckBox mLockscreenSounds;
         private CheckBox mDtmfTone;
-        private CheckBox mVibrateInputDevices;
+        private CheckBox mHapticFeedback;
 
         private ContentResolver mContentResolver;
 
@@ -104,11 +104,11 @@ public class SoundSettingsPage extends SetupPage {
             }
         };
 
-        private View.OnClickListener mVibrateInputDevicesClickListener = new View.OnClickListener() {
+        private View.OnClickListener mHapticFeedbackClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Settings.System.putInt(mContentResolver,
-                        Settings.System.HAPTIC_FEEDBACK_ENABLED, !mVibrateInputDevices.isChecked() ? 1 : 0);
+                        Settings.System.HAPTIC_FEEDBACK_ENABLED, !mHapticFeedback.isChecked() ? 1 : 0);
 
                 updateSettingsToggles();
             }
@@ -132,9 +132,9 @@ public class SoundSettingsPage extends SetupPage {
             mDtmfToneRow.setOnClickListener(mDtmfToneClickListener);
             mDtmfTone = (CheckBox) mRootView.findViewById(R.id.dtmf_tone_checkbox);
 
-            mVibrateInputDevicesRow = mRootView.findViewById(R.id.vibrate_input_devices);
-            mVibrateInputDevicesRow.setOnClickListener(mVibrateInputDevicesClickListener);
-            mVibrateInputDevices = (CheckBox) mRootView.findViewById(R.id.vibrate_input_devices_checkbox);
+            mHapticFeedbackRow = mRootView.findViewById(R.id.haptic_feedback);
+            mHapticFeedbackRow.setOnClickListener(mHapticFeedbackClickListener);
+            mHapticFeedback = (CheckBox) mRootView.findViewById(R.id.haptic_feedback_checkbox);
         }
 
         @Override
@@ -165,13 +165,13 @@ public class SoundSettingsPage extends SetupPage {
                     Settings.System.LOCKSCREEN_SOUNDS_ENABLED, 0) == 1;
             boolean DtmfToneEnabled = Settings.System.getInt(mContentResolver,
                     Settings.System.DTMF_TONE_WHEN_DIALING, 0) == 1;
-            boolean vibrateInputDevicesEnabled = Settings.System.getInt(mContentResolver,
+            boolean hapticFeedbackEnabled = Settings.System.getInt(mContentResolver,
                     Settings.System.HAPTIC_FEEDBACK_ENABLED, 0) == 1;
 
             mSoundEffects.setChecked(touchSoundsEnabled);
             mLockscreenSounds.setChecked(lockscreenSoundsEnabled);
             mDtmfTone.setChecked(DtmfToneEnabled);
-            mVibrateInputDevices.setChecked(vibrateInputDevicesEnabled);
+            mHapticFeedback.setChecked(hapticFeedbackEnabled);
         }
 
     }
