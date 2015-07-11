@@ -27,20 +27,10 @@
         android:id="@+id/brand_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/brand"
-        android:paddingLeft="@dimen/header_logo_margin_left"
         android:paddingBottom="@dimen/header_logo_margin_bottom"
         android:layout_alignParentTop="true" />
-
-    <ImageView
-        android:id="@+id/powered_by_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/powered_by"
-        android:visibility="gone"
-        android:paddingLeft="@dimen/header_logo_margin_left"
-        android:paddingBottom="@dimen/header_logo_margin_bottom"
-        android:layout_below="@+id/brand_logo" />
 
     <TextView
         android:layout_width="match_parent"

@@ -180,11 +180,6 @@ public class WelcomePage extends SetupPage {
         protected void initializePage() {
             mLanguagePicker = (LocalePicker) mRootView.findViewById(R.id.locale_list);
             loadLanguages();
-            final boolean brandedDevice = getResources().getBoolean(
-                    R.bool.branded_device);
-            if (brandedDevice) {
-                mRootView.findViewById(R.id.powered_by_logo).setVisibility(View.VISIBLE);
-            }
         }
 
         private void loadLanguages() {
