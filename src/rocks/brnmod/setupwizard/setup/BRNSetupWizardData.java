@@ -64,6 +64,7 @@ public class BRNSetupWizardData extends AbstractSetupData {
             pages.add(new MobileDataPage(mContext, this)
                     .setHidden(!isSimInserted() || mMobileDataEnabled));
         }
+        pages.add(new FDroidPage(mContext, this));
         pages.add(new LocationSettingsPage(mContext, this));
         pages.add(new CommonSettingsPage(mContext, this));
         pages.add(new SoundSettingsPage(mContext, this));
@@ -84,9 +85,11 @@ public class BRNSetupWizardData extends AbstractSetupData {
                 intent.getAction()
                         .equals(ConnectivityManager.CONNECTIVITY_ACTION_IMMEDIATE)) {
             showHideMobileDataPage();
+            showHideFDroidPages();
         } else if (intent.getAction()
                 .equals(TelephonyIntents.ACTION_ANY_DATA_CONNECTION_STATE_CHANGED)) {
             showHideMobileDataPage();
+            showHideFDroidPages();
         } else if (intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED) ||
                 intent.getAction().equals(TelephonyIntents.ACTION_NETWORK_SET_TIMEZONE)) {
             mTimeZoneSet = true;
@@ -95,6 +98,14 @@ public class BRNSetupWizardData extends AbstractSetupData {
                 intent.getAction().equals(TelephonyIntents.ACTION_NETWORK_SET_TIME)) {
             mTimeSet = true;
             showHideDateTimePage();
+        }
+    }
+
+    private void showHideFDroidPages() {
+        boolean isConnected = SetupWizardUtils.isNetworkConnected(mContext);
+        FDroidPage fDroidPage = (FDroidPage) getPage(FDroidPage.TAG);
+        if (fDroidPage != null) {
+            fDroidPage.setHidden(!isConnected);
         }
     }
 

@@ -25,13 +25,12 @@ import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.provider.Settings;
 
+import rocks.brnmod.setupwizard.fdroid.FDroidClient;
 import rocks.brnmod.setupwizard.util.SetupWizardUtils;
 
 public class SetupWizardApp extends Application {
 
     public static final String TAG = SetupWizardApp.class.getSimpleName();
-    // Leave this off for release
-    public static final boolean DEBUG = false;
 
     public static final String ACTION_FINISHED = "rocks.brnmod.setupwizard.SETUP_FINISHED";
 
@@ -78,6 +77,8 @@ public class SetupWizardApp extends Application {
             mIsRadioReady = true;
         }
     };
+
+    private FDroidClient fDroidClient = null;
 
     @Override
     public void onCreate() {
@@ -131,6 +132,14 @@ public class SetupWizardApp extends Application {
 
     public void enableStatusBar() {
         mStatusBarManager.disable(StatusBarManager.DISABLE_NONE);
+    }
+
+    public FDroidClient getFDroidClient() {
+        if(fDroidClient == null) {
+            fDroidClient = new FDroidClient();
+        }
+
+        return fDroidClient;
     }
 
     public void disableCaptivePortalDetection() {

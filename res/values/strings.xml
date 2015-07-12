@@ -29,6 +29,7 @@
     <string name="setup_wifi">Select Wi-Fi</string>
     <string name="setup_sim_missing">SIM card missing</string>
     <string name="setup_choose_data_sim">Choose a SIM for data</string>
+    <string name="setup_fdroid">Recommended Apps</string>
     <string name="setup_location">Location services</string>
     <string name="setup_common">Common settings</string>
     <string name="setup_sound">Sound settings</string>
@@ -41,6 +42,7 @@
     <string name="choose_data_sim_summary" product="tablet">Which SIM do you want to use for data? The selected SIM may incur network charges as it will be used to set up your tablet.</string>
     <string name="choose_data_sim_summary" product="default">Which SIM do you want to use for data? The selected SIM may incur network charges as it will be used to set up your phone.</string>
     <string name="date_time_summary">Set your time zone and adjust current date and time if needed</string>
+    <string name="fdroid_summary">F-Droid is an app store with FOSS applications.</string>
     <string name="location_services_summary">The location is provided with μg UnifiedNlp by various plugins. Please <b>scroll down and enable some providers</b> in the settings.</string>
     <string name="location_access_summary"><b>Allow apps that have asked your permission</b> to use your location information. This may include your current location and past locations.</string>
     <string name="location_gps" product="tablet"><b>Improve location accuracy</b> by allowing apps to use the GPS on your tablet.</string>
@@ -71,4 +73,5 @@
     <string name="vibrate_input_devices_summary">Vibrate on touch</string>
     <string name="open_microg_nlp_settings">Open <b>µg UnifiedNlp</b> Settings</string>
     <string name="captive_portal_detection_summary">If a <b>captive portal</b> is detected show exclamation mark in status bar and switch to other data connection</string>
+    <string name="app_icon">App icon</string>
 </resources>
